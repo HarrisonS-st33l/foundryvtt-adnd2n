@@ -1,0 +1,151 @@
+{
+    "Actor":{
+        "types": [
+            "character",
+            "npc"
+        ],
+        "templates": {
+            "base": {
+                "health": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 0
+                },
+                "movementSpeed": 12,
+                "alignment": "TN",
+                "size": "M",
+                "savingThrows": {
+                    "paralysation": 14,
+                    "poison": 14,
+                    "death": 14,
+                    "rod": 16,
+                    "staffs": 16,
+                    "wand": 16,
+                    "petrification": 15,
+                    "polymorph": 15,
+                    "breathWeapon": 17,
+                    "spell": 17
+                },
+                "toHit": 0
+            }
+        },
+        "character": {
+            "templates": ["base"],
+            "playerName": "",
+            "characterName": "",
+            "race": "",
+            "class": "Fighter",
+            "Appearance": {
+                "Hair": "",
+                "Eyes": "",
+                "Sex": ""
+            },
+            "Age": 18,
+            "Handed": "Right",
+            "Attributes": {
+                "strength": {
+                    "value": 10,
+                    "hitAdjust": 0,
+                    "damageAdjust": 0,
+                    "weightAllowance": 45,
+                    "maxPress": 100,
+                    "openDoors": 3,
+                    "bendBars": 5
+                },
+                "dexterity": {
+                    "value": 10,
+                    "hitAdjust": 0,
+                    "defAdjust": 0
+                },
+                "constitution": {
+                    "hpAdjust": 0,
+                    "systemShock": 50,
+                    "resurrectionSurvival": 50,
+                    "poisonSave" : 0,
+                    "regeneration": 0
+                },
+                "intelligence": {
+                    "languages": 0,
+                    "maxSpellLevel": 5,
+                    "spellLearnChance": 55,
+                    "maxSpellsPerLevel": 10
+                },
+                "willpower": {
+                    "defAdjust": 0,
+                    "bonusSpells": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
+                    "spellFailure": 0
+                },
+                "charisma": {
+                    "henchmen": 3,
+                    "loyaltyBase": 0,
+                    "reactionAdjust": 0
+                },
+                "perception": {
+                    "surpriseAdjust": 0,
+                    "illusionImmunity": 0
+                }
+            }
+        },
+        "npc": {
+            "templates": ["base"],
+            "climateTerrain": "",
+            "frequency": "",
+            "organisation": "",
+            "activityCycle": "",
+            "diet": "",
+            "intelligence": "",
+            "treasure": "",
+            "numberAppearing": "",
+            "armorClass": 10,
+            "hitDice": {
+                "number": 1,
+                "modifier": 0
+            },
+            "numAttacks": 1,
+            "damage": ["1d6"],
+            "specialAttacks": "",
+            "specialDefenses": "",
+            "magicResistance": 0,
+            "morale": 10,
+            "xpValue": 15,
+            "appearance": "",
+            "combat": "",
+            "habitatSociety": "",
+            "ecology": "",
+            "variants": ""
+        }
+
+    },
+    "Item":{
+        "types": [
+            "weapon",
+            "armor",
+            "item"
+        ],
+        "templates": {
+            "itemDescription": {
+                "decription": ""
+            }
+
+        },
+        "weapon": {
+            "weight": 0,
+            "size": "M",
+            "type": "S",
+            "speed": 3,
+            "damage": "d8",
+            "reach": 1,
+            "shortRange": 5,
+            "mediumRange": 10,
+            "longRange": 15,
+            "rateOfFire": 1
+        },
+        "armor": {
+            "weight": 0,
+            "armorClass": 10
+        },
+        "item": {
+            "weight": 0
+        }
+    }
+}

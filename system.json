@@ -1,0 +1,29 @@
+{
+    "name": "adnd2n",
+    "title": "Advanced Dungeons and Dragons 2.n",
+    "description": "A System for playing D&D as Neal",
+    "author": "mr st33l",
+    "version": "0.01",
+    "minimumCoreVersion": "0.8.0",
+    "compatibleCoreVersion": "0.8.0",
+    "esmodules": [
+        "adnd2n.js"
+    ],
+    "styles": [
+        "adnd2n.css"
+    ],
+    "packs": [
+
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "gridDistance": "5",
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "health",
+    "initiative": "1d10 + @speed"
+}
