@@ -1,0 +1,48 @@
+{
+    "adnd2n": {
+        "attack": {
+            "slashing": "Slashing",
+            "piercing": "Piercing",
+            "bludgeoning": "Bludgeoning"
+        },
+        "weapon": {
+            "weight": "Weight",
+            "size": "Size",
+            "type": "Damage Type",
+            "speed": "Iniative Modifier",
+            "damage": "Damage",
+            "reach": "Reach",
+            "shortRange": "Short Range",
+            "mediumRange": "Medium Range",
+            "longRange": "Long Range",
+            "range": "Range (Yards)",
+            "rateOfFire": "Rate of Fire",
+            "magicBonus": "Magic Bonus",
+            "strengthHit": "Strength Bonus Applies to Hit",
+            "strengthDam": "Strength Bonus Applies to Damage",
+            "dexterity": "Dexterity Bonus Applies to Hit",
+            "notes": "Notes"
+        },
+        "sizes": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+        },
+        "character": {
+            "playerName": "Player Name",
+            "characterName": "Character Name",
+            "race": "Race",
+            "movementSpeed": "Speed",
+            "class": "Class",
+            "alignment": "Alignment",
+            "appearance": {
+                "hair": "Hair",
+                "eyes": "Eyes",
+                "sex": "Sex",
+                "misc": "Appearance"
+            },
+            "age": "Age",
+            "handed": "Handed"
+        }
+    }
+}

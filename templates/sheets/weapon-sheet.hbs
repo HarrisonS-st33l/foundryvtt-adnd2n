@@ -1,0 +1,65 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "adnd2n.weapon.weight"}}</th>
+                <th>{{localize "adnd2n.weapon.size"}}</th>                
+                <th>{{localize "adnd2n.weapon.type"}}</th>
+                <th>{{localize "adnd2n.weapon.speed"}}</th>
+                <th>{{localize "adnd2n.weapon.damage"}}</th>
+                <th>{{localize "adnd2n.weapon.reach"}}</th>
+                <th>{{localize "adnd2n.weapon.shortRange"}}</th>
+                <th>{{localize "adnd2n.weapon.mediumRange"}}</th>
+                <th>{{localize "adnd2n.weapon.longRange"}}</th>
+                <th>{{localize "adnd2n.weapon.rateOfFire"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.weight" type="text" value="{{data.weight}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <select name="data.size">
+                        {{#select data.size}}
+                        {{#each config.sizes as |name size|}}
+                        <option value="{{size}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                </td>
+                <td>
+                    <select name="data.type">
+                        {{#select data.type}}
+                        {{#each config.attackTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                </td>
+                <td>
+                    <input name="data.speed" type="text" value="{{data.speed}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Formula" />
+                </td>
+                <td>
+                    <input name="data.reach" type="text" value="{{data.reach}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.shortRange" type="text" value="{{data.shortRange}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.mediumRange" type="text" value="{{data.mediumRange}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.longRange" type="text" value="{{data.longRange}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.rateOfFire" type="text" value="{{data.rateOfFire}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

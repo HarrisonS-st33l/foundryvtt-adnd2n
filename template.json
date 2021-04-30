@@ -12,7 +12,7 @@
                     "max": 0
                 },
                 "movementSpeed": 12,
-                "alignment": "TN",
+                "alignment": "N",
                 "size": "M",
                 "savingThrows": {
                     "paralysation": 14,
@@ -35,14 +35,15 @@
             "characterName": "",
             "race": "",
             "class": "Fighter",
-            "Appearance": {
-                "Hair": "",
-                "Eyes": "",
-                "Sex": ""
+            "appearance": {
+                "hair": "",
+                "eyes": "",
+                "sex": "",
+                "misc": ""
             },
-            "Age": 18,
-            "Handed": "Right",
-            "Attributes": {
+            "age": 18,
+            "handed": "Right",
+            "attributes": {
                 "strength": {
                     "value": 10,
                     "hitAdjust": 0,
@@ -126,9 +127,9 @@
             "itemDescription": {
                 "decription": ""
             }
-
         },
         "weapon": {
+            "templates": ["itemDescription"],
             "weight": 0,
             "size": "M",
             "type": "S",
@@ -138,7 +139,11 @@
             "shortRange": 5,
             "mediumRange": 10,
             "longRange": 15,
-            "rateOfFire": 1
+            "rateOfFire": 1,
+            "magicBonus": 0,
+            "strengthHit": true,
+            "strengthDam": true,
+            "dexterity": false
         },
         "armor": {
             "weight": 0,
