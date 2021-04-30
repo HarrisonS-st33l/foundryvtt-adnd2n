@@ -4,8 +4,8 @@
     "description": "A System for playing D&D as Neal",
     "author": "mr st33l",
     "version": "0.01",
-    "minimumCoreVersion": "0.8.1",
-    "compatibleCoreVersion": "0.8.1",
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
     "esmodules": [
         "adnd2n.js"
     ],
