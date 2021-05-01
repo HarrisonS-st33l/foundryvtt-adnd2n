@@ -2,7 +2,7 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             template: "systems/adnd2n/templates/sheets/character-sheet.hbs",
-            classes: ["adnd2n", "sheet", "Character"]
+            classes: ["adnd2n", "sheet", "character"]
         });
     }
 

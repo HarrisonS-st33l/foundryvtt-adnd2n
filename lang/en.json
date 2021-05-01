@@ -42,7 +42,21 @@
                 "misc": "Appearance"
             },
             "age": "Age",
-            "handed": "Handed"
+            "handed": "Handed",
+            "size": "Size"
+        },
+        "attributes": {
+            "abilityScore": "Ability Score",
+            "strength": {
+                "strength": "Strength",
+                "str": "Str",
+                "hitAdjust": "Melee Hit Adjust",
+                "damageAdjust": "Melee Damage Adjust",
+                "weightAllowance": "Weight Allow",
+                "maxPress": "Max Press",
+                "openDoors": "Open Doors",
+                "bendBars": "Bend Bars"
+            }
         }
     }
 }

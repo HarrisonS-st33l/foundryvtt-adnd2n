@@ -1,7 +1,50 @@
-.adnd2n.sheet.character .character-header {
+.adnd2n.sheet.character .character-header .row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.adnd2n.sheet.character .character-header .row input {
+  flex: 1200;
+  flex-basis: 80px;
+  flex-shrink: 0;
+}
+.adnd2n.sheet.character .character-header .row [name="race"] {
+  flex: 280 1 280px;
+}
+.adnd2n.sheet.character .character-header .row [name="movementSpeed"] {
+  flex: 188 1 188px;
+}
+.adnd2n.sheet.character .character-header .row [name="class"] {
+  flex: 318 1 318px;
+}
+.adnd2n.sheet.character .character-header .row [name="alignment"] {
+  flex: 414 1 414px;
+}
+.adnd2n.sheet.character .character-header .row [name="hair"] {
+  flex: 392 1 392px;
+}
+.adnd2n.sheet.character .character-header .row [name="eyes"] {
+  flex: 394 1 394px;
+}
+.adnd2n.sheet.character .character-header .row [name="size"] {
+  flex: 244 1 244px;
+}
+.adnd2n.sheet.character .character-header .row [name="sex"] {
+  flex: 170 1 170px;
+}
+.adnd2n.sheet.character .character-header .row [name="appearance"] {
+  flex: 786 1 786px;
+}
+.adnd2n.sheet.character .character-header .row [name="age"] {
+  flex: 151 1 151px;
+}
+.adnd2n.sheet.character .character-header .row [name="handed"] {
+  flex: 263 1 263px;
+}
+.adnd2n.sheet.character .character.stats {
+  table-layout: fixed;
+  width: 100%;
+}
+.adnd2n.sheet.character .character.stats .strengthValue {
+  vertical-align: bottom;
 }
 .adnd2n.sheet.item form {
   display: flex;

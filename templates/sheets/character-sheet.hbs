@@ -1,18 +1,47 @@
 <form class="{{cssClass}}" autocomplete="off">
     <section class="character-header">
-        <input name="playerName" type="text" value="{{actor.playerName}}" placeholder="{{localize "adnd2n.character.playerName"}}"/>
-        <input name="characterName" type="text" value="{{actor.characterName}}" placeholder="{{localize "adnd2n.character.characterName"}}"/>
-        <input name="race" type="text" value="{{actor.race}}" placeholder="{{localize "adnd2n.character.race"}}"/>
-        <input name="movementSpeed" type="text" value="{{actor.movementSpeed}}" placeholder="{{localize "adnd2n.character.movementSpeed"}}"/>
-        <input name="class" type="text" value="{{actor.class}}" placeholder="{{localize "adnd2n.character.class"}}"/>
-        <input name="alignment" type="text" value="{{actor.alignment}}" placeholder="{{localize "adnd2n.character.alignment"}}"/>
-        <input name="hair" type="text" value="{{actor.appearance.hair}}" placeholder="{{localize "adnd2n.character.appearance.hair"}}"/>
-        <input name="eyes" type="text" value="{{actor.appearance.eyes}}" placeholder="{{localize "adnd2n.character.appearance.eyes"}}"/>
-        <input name="sex" type="text" value="{{actor.appearance.sex}}" placeholder="{{localize "adnd2n.character.appearance.sex"}}"/>
-        <input name="appearance" type="text" value="{{actor.appearance.misc}}" placeholder="{{localize "adnd2n.character.appearance.misc"}}"/>
-        <input name="age" type="text" value="{{actor.age}}" placeholder="{{localize "adnd2n.character.age"}}"/>
-        <input name="handed" type="text" value="{{actor.handed}}" placeholder="{{localize "adnd2n.character.handed"}}"/>
+        <section class="row">
+            <input name="playerName" type="text" value="{{actor.playerName}}" placeholder="{{localize "adnd2n.character.playerName"}}"/>
+            <input name="characterName" type="text" value="{{actor.characterName}}" placeholder="{{localize "adnd2n.character.characterName"}}"/>
+        </section>
+        <section class="row">
+            <input name="race" type="text" value="{{actor.race}}" placeholder="{{localize "adnd2n.character.race"}}"/>
+            <input name="movementSpeed" type="text" value="{{actor.movementSpeed}}" placeholder="{{localize "adnd2n.character.movementSpeed"}}"/>
+            <input name="class" type="text" value="{{actor.class}}" placeholder="{{localize "adnd2n.character.class"}}"/>
+            <input name="alignment" type="text" value="{{actor.alignment}}" placeholder="{{localize "adnd2n.character.alignment"}}"/>
+        </section>
+        <section class="row">
+            <input name="hair" type="text" value="{{actor.appearance.hair}}" placeholder="{{localize "adnd2n.character.appearance.hair"}}"/>
+            <input name="eyes" type="text" value="{{actor.appearance.eyes}}" placeholder="{{localize "adnd2n.character.appearance.eyes"}}"/>
+            <input name="size" type="text" value="{{actor.size}}" placeholder="{{localize "adnd2n.character.size"}}"/>
+            <input name="sex" type="text" value="{{actor.appearance.sex}}" placeholder="{{localize "adnd2n.character.appearance.sex"}}"/>
+        </section>
+        <section class="row">
+            <input name="appearance" type="text" value="{{actor.appearance.misc}}" placeholder="{{localize "adnd2n.character.appearance.misc"}}"/>
+            <input name="age" type="text" value="{{actor.age}}" placeholder="{{localize "adnd2n.character.age"}}"/>
+            <input name="handed" type="text" value="{{actor.handed}}" placeholder="{{localize "adnd2n.character.handed"}}"/>
+        </section>
     </section>
+    <table class="character-stats">
+        <tr class="strengthHeader">
+            <td rowspan="2"><h1>{{localize "adnd2n.attributes.strength.str"}}</h1></td>
+            <td rowspan="2"><input class="strengthValue" name="strengthValue" type="text" value="{{actor.attributes.strength.value}}"/></td>
+            <td>{{localize "adnd2n.attributes.strength.hitAdjust"}}</td>
+            <td>{{localize "adnd2n.attributes.strength.damageAdjust"}}</td>
+            <td>{{localize "adnd2n.attributes.strength.weightAllowance"}}</td>
+            <td>{{localize "adnd2n.attributes.strength.maxPress"}}</td>
+            <td>{{localize "adnd2n.attributes.strength.openDoors"}}</td>
+            <td>{{localize "adnd2n.attributes.strength.bendBars"}}</td>
+        </tr>
+        <tr class="strength">
+            <td><input name="hitAdjust" type="text" value={{actor.attributes.strength.hitAdjust}}></td>
+            <td><input name="damageAdjust" type="text" value={{actor.attributes.strength.damageAdjust}}></td>
+            <td><input name="weightAllowance" type="text" value={{actor.attributes.strength.weightAllowance}}></td>
+            <td><input name="maxPress" type="text" value={{actor.attributes.strength.maxPress}}></td>
+            <td><input name="openDoors" type="text" value={{actor.attributes.strength.openDoors}}></td>
+            <td><input name="bendBars" type="text" value={{actor.attributes.strength.bendBars}}></td>
+        </tr>
+    </table>
 </form>
 
  

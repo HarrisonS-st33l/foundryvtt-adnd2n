@@ -1,7 +1,30 @@
 .adnd2n.sheet.character {
     .character-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .row{
+            display: flex;
+            input {
+                flex: 1200;
+                flex-basis: 80px;
+                flex-shrink: 0;
+            }
+            [name="race"] { flex: 280 1 280px; }
+            [name="movementSpeed"] { flex: 188 1 188px; }
+            [name="class"] { flex: 318 1 318px; }
+            [name="alignment"] { flex: 414 1 414px; } 
+            [name="hair"] { flex: 392 1 392px; }
+            [name="eyes"] { flex: 394 1 394px; }
+            [name="size"] { flex: 244 1 244px; }
+            [name="sex"] { flex: 170 1 170px; } 
+            [name="appearance"] { flex: 786 1 786px; } 
+            [name="age"] { flex: 151 1 151px; }
+            [name="handed"] { flex: 263 1 263px; }
+        };
+    }
+    .character.stats {
+        table-layout: fixed;
+        width: 100%;
+        .strengthValue {
+            vertical-align: bottom;
+        }
     }
 }

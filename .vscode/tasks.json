@@ -6,17 +6,17 @@
 			"task": "default",
 			"problemMatcher": [],
 			"label": "gulp: default",
-			"group": "build"
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
 			"type": "gulp",
 			"task": "less",
 			"problemMatcher": [],
 			"label": "gulp: less",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
+			"group": "build"
 		}
 	]
 }
