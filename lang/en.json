@@ -56,6 +56,49 @@
                 "maxPress": "Max Press",
                 "openDoors": "Open Doors",
                 "bendBars": "Bend Bars"
+            },
+            "dexterity": {
+                "dexterity": "Dexterity",
+                "dex": "Dex",
+                "hitAdjust": "Missile Hit Adjust",
+                "defAdjust": "Defensive Adjustment"
+            },
+            "constitution": {
+                "constitution": "Constitution",
+                "con": "Con",
+                "hpAdjust": "HP Adjust",
+                "systemShock": "System Shock",
+                "resurrectionSurvival": "Resurrection Survival",
+                "poisonSave": "Poison Save",
+                "regeneration": "Regeneration"
+            },
+            "intelligence": {
+                "intelligence": "Intelligence",
+                "int": "Int",
+                "languages": "Languages",
+                "maxSpellLevel": "Max Spell Level",
+                "spellLearnChance": "Chance to Learn Spell",
+                "maxSpellsPerLevel": "Max Spells Per Level"
+            },
+            "willpower": {
+                "willpower": "Willpower",
+                "wil": "Wil",
+                "defAdjust": "Magical Defense Adjustment",
+                "bonusSpells": "Bonus Spells",
+                "spellFailure": "Spell Failure"
+            },
+            "charisma": {
+                "charisma": "Charisma",
+                "chr": "Chr",
+                "henchmen": "Henchmen",
+                "loyaltyBase": "Loyalty Base",
+                "reactionAdjust": "Reaction Adjust"
+            },
+            "perception": {
+                "perception": "Perception",
+                "pcp": "Pcp",
+                "surpriseAdjust": "Suprise Adjust",
+                "illusionImmunity": "Illusion Immunity"
             }
         }
     }

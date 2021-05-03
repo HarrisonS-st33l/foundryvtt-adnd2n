@@ -1,30 +1,93 @@
 .adnd2n.sheet.character {
     .character-header {
-        .row{
-            display: flex;
+        .row {
+            display: grid;
+        }
+        .form-text {
+            position: relative;
+        }
+        label {
+            position: absolute;
+            padding: 5px 0px 0px 5px;
+            font-weight: bold;
+        }
+        .row1 {
+            grid-template-columns: 50% 50%;
             input {
-                flex: 1200;
-                flex-basis: 80px;
-                flex-shrink: 0;
+                padding-top: 1px;
             }
-            [name="race"] { flex: 280 1 280px; }
-            [name="movementSpeed"] { flex: 188 1 188px; }
-            [name="class"] { flex: 318 1 318px; }
-            [name="alignment"] { flex: 414 1 414px; } 
-            [name="hair"] { flex: 392 1 392px; }
-            [name="eyes"] { flex: 394 1 394px; }
-            [name="size"] { flex: 244 1 244px; }
-            [name="sex"] { flex: 170 1 170px; } 
-            [name="appearance"] { flex: 786 1 786px; } 
-            [name="age"] { flex: 151 1 151px; }
-            [name="handed"] { flex: 263 1 263px; }
-        };
+            #playerName {padding-left: 11ch;}
+            #characterName {padding-left: 15ch;}
+        }
+        .row2 {
+            grid-template-columns: 23.33% 15.67% 26.5% 34.5%;
+            input {
+                padding: 1px 0px 0px 10ch;
+            }
+            #race {padding-left: 5ch;}
+            #movementSpeed {padding-left: 6ch;}
+            #class {padding-left: 6ch;}
+            #alignment {padding-left: 10ch;}
+        }
+        .row3 {
+            grid-template-columns: 32.67% 32.83% 20.33% 14.17%;
+            input {
+                padding: 1px 0px 0px 14ch;
+            }
+            #hair {padding-left: 5ch;}
+            #eyes {padding-left: 5ch;}
+            #size {padding-left: 5ch;}
+            #sex {padding-left: 4ch;}
+        }
+        .row4 {
+            grid-template-columns: 65.5% 12.58% 21.92%;
+            input {
+                padding: 1px 0px 0px 14ch;
+            }
+            #appearance {padding-left: 11ch;}   
+            #age {padding-left: 5ch;}
+            #handed {padding-left: 8ch;}
+        }
     }
-    .character.stats {
-        table-layout: fixed;
-        width: 100%;
-        .strengthValue {
-            vertical-align: bottom;
+    .character-stats {
+        .row {
+            display: grid;
+        }
+        .form-text {
+            position: relative;
+            height: 50px;
+        }
+        .attribute {
+            font-size: xx-large;
+            text-align: center;
+        }
+        label {
+            position: absolute;
+            font-size: smaller;
+        }
+        input {
+            height: 50px;
+        }
+        .strength {
+            grid-template-columns: 10.916667% 9.416667% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778%;
+        }
+        .dexterity {
+            grid-template-columns: 10.916667% 9.416667% 39.833333% 39.833333%;
+        }
+        .constitution {
+            grid-template-columns: 10.916667% 9.416667% 15.933333% 15.933333% 15.933333% 15.933333% 15.933333%;
+        }
+        .intelligence {
+            grid-template-columns: 10.916667% 9.416667% 19.916667% 19.916667% 19.916667% 19.916667%;
+        }
+        .willpower {
+            grid-template-columns: 10.916667% 9.416667% 17.166667% 45.25% 17.225%;
+        }
+        .charisma {
+            grid-template-columns: 10.916667% 9.416667% 26.555556% 26.555556% 26.555556%;
+        }
+        .perception {
+            grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
         }
     }
 }

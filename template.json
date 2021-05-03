@@ -59,6 +59,7 @@
                     "defAdjust": 0
                 },
                 "constitution": {
+                    "value": 10,
                     "hpAdjust": 0,
                     "systemShock": 50,
                     "resurrectionSurvival": 50,
@@ -66,22 +67,26 @@
                     "regeneration": 0
                 },
                 "intelligence": {
+                    "value": 10,
                     "languages": 0,
                     "maxSpellLevel": 5,
                     "spellLearnChance": 55,
                     "maxSpellsPerLevel": 10
                 },
                 "willpower": {
+                    "value": 10,
                     "defAdjust": 0,
                     "bonusSpells": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
                     "spellFailure": 0
                 },
                 "charisma": {
+                    "value": 10,
                     "henchmen": 3,
                     "loyaltyBase": 0,
                     "reactionAdjust": 0
                 },
                 "perception": {
+                    "value": 10,
                     "surpriseAdjust": 0,
                     "illusionImmunity": 0
                 }
