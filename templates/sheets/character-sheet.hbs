@@ -81,7 +81,7 @@
                     <div class="attribute">{{localize "adnd2n.attributes.perception.pcp"}}</div>
                     <div class="value"><input name="data.attributes.perception.value" type="text" value="{{data.attributes.perception.value}}"></input></div>
                     <div class="form-text"><label for="surpriseAdjust">{{localize "adnd2n.attributes.perception.surpriseAdjust"}}</label><input name="data.attributes.perception.surpriseAdjust" id="surpriseAdjust" type="text" value="{{data.attributes.perception.surpriseAdjust}}"  readonly></input></div>
-                    <div class="form-text"><label for="illusionImmunity">{{localize "adnd2n.attributes.perception.illusionImmunity"}}</label><input name="data.attributes.perception.illusionImmunity" id="illusionImmunity" type="text" value="{{data.attributes.perception.illusionImmunity}} level"  readonly></input></div>
+                    <div class="form-text"><label for="illusionImmunity">{{localize "adnd2n.attributes.perception.illusionImmunity"}}</label><input name="data.attributes.perception.illusionImmunity" id="illusionImmunity" type="text" value="{{data.attributes.perception.illusionImmunity}}{{#ifNotEquals data.attributes.perception.illusionImmunity 'None'}} level{{/ifNotEquals}}"  readonly></input></div>
                 </section>
             </section>
         </div>
