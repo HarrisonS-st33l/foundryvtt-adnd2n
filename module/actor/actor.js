@@ -18,7 +18,8 @@ export default class Adnd2nActor extends Actor {
         let exceptionalStrengthRegEx = /(?:^18)(?:[/-](\d{1,3})$|\[(\d{1,3})\]$)/;
         let value = 0;
         if (exceptionalStrengthRegEx.test(strength.value)) {
-            let exceptionalStrength = parseInt(exceptionalStrengthRegEx.exec(strength.value)[2]);
+            let exceptionalStrength = exceptionalStrengthRegEx.exec(strength.value);
+            exceptionalStrength = exceptionalStrength[1] ? exceptionalStrength[1] : exceptionalStrength[2];
             if (exceptionalStrength < 1 || exceptionalStrength > 100) {value = 0;}
             else if (exceptionalStrength < 51) {value = '18[01-50]';}
             else if (exceptionalStrength < 76) {value = '18[51-75]';}

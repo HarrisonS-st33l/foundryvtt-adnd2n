@@ -10,7 +10,6 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
     getData() {
         const data = super.getData();
         data.config = CONFIG.adnd2n;
-        console.log(data);
         return data;
     }
 
@@ -31,6 +30,10 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
             this.actor.deleteOwnedItem(wr.data('itemId'));
             wr.slideUp(200, () => this.render(false));
         });
+        if (this.actor.owner) {
+            html.find('.rollable').click(this._onRoll.bind(this));
+            html.find('.rollable-item').click(this._onRollItem.bind(this));
+        }
     }
 
     _onItemCreate(event) {
@@ -46,5 +49,26 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
         };
         delete itemData.data["type"];
         return this.actor.createOwnedItem(itemData);
+    }
+
+    _onRoll(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+
+        if (dataset.roll) {
+            let roll = new Roll(dataset.roll, this.actor.data.data);
+            let label = dataset.label ? `Rolling ${dataset.label}` : '';
+            roll.roll().toMessage({
+                speaker: ChatMessage.getSpeaker({actor: this.actor}),
+                flavor: label
+            });
+        }
+    }
+
+    _onRollItem(event) {
+        const ItemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(ItemID);
+        item.roll();
     }
 }

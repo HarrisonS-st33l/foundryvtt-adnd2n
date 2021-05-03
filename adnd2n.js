@@ -1,13 +1,16 @@
 import Adnd2nItemSheet from "./module/sheets/Adnd2nItemSheet.js";
 import Adnd2nCharacterSheet from "./module/sheets/Adnd2nCharacterSheet.js";
 import Adnd2nActor from "./module/actor/actor.js";
+import Adnd2nItem from "./module/item/item.js";
 import { adnd2n } from "./module/config.js";
+
 
 Hooks.once("init", function () {
     console.log("adnd2n | Initialising AD&D 2.neal System");
 
     CONFIG.adnd2n = adnd2n;
     CONFIG.Actor.entityClass = Adnd2nActor;
+    CONFIG.Item.entityClass = Adnd2nItem;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("adnd2n", Adnd2nItemSheet, { makeDefault: true });
