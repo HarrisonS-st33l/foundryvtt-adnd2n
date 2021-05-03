@@ -4,8 +4,13 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
     </header>
     <div class="sheet-content">
+        <h1>{{actor.charactername}}</h1>
         <table>
             <tr>
+                {{#if isOwned}}
+                <th>{{localize "adnd2n.weapon.toHit"}}</th>
+                <th>{{localize "adnd2n.weapon.toDam"}}</th>    
+                {{/if}}
                 <th>{{localize "adnd2n.weapon.weight"}}</th>
                 <th>{{localize "adnd2n.weapon.size"}}</th>                
                 <th>{{localize "adnd2n.weapon.type"}}</th>
@@ -18,6 +23,10 @@
                 <th>{{localize "adnd2n.weapon.rateOfFire"}}</th>
             </tr>
             <tr>
+                {{#if isOwned}}
+                <td><input name="data.toHit" type="text" value="{{data.toHit}}" data-dtype="Number" /></td>
+                <td><input name="data.toDam" type="text" value="{{data.toDam}}" data-dtype="Number" /></td>
+                {{/if}}
                 <td>
                     <input name="data.weight" type="text" value="{{data.weight}}" data-dtype="Number" />
                 </td>

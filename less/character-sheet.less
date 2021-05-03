@@ -16,7 +16,7 @@
             input {
                 padding-top: 1px;
             }
-            #playerName {padding-left: 11ch;}
+            #playerName {padding-left: 12ch;}
             #characterName {padding-left: 15ch;}
         }
         .row2 {
@@ -88,6 +88,27 @@
         }
         .perception {
             grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
+        }
+    }
+    .weapons .weapon-list {
+        text-align: center;
+        .flexrow {
+            display: flex;
+            .weapon-name {
+                flex: 2;
+            }
+            .weapon-controls {
+                flex: 0.3;
+            }
+            .weapon-toHit {
+                flex: 0.5;
+            }
+            .weapon-toDam {
+                flex: 0.5;
+            }
+            .weapon-speed {
+                flex: 0.5;
+            }
         }
     }
 }

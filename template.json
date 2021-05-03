@@ -77,6 +77,7 @@
                     "value": 10,
                     "defAdjust": 0,
                     "bonusSpells": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
+                    "bonusSpellsPrintable": "",
                     "spellFailure": 0
                 },
                 "charisma": {
@@ -137,7 +138,7 @@
             "templates": ["itemDescription"],
             "weight": 0,
             "size": "M",
-            "type": "S",
+            "type": "slashing",
             "speed": 3,
             "damage": "d8",
             "reach": 1,
@@ -145,10 +146,9 @@
             "mediumRange": 10,
             "longRange": 15,
             "rateOfFire": 1,
-            "magicBonus": 0,
-            "strengthHit": true,
-            "strengthDam": true,
-            "dexterity": false
+            "range": "5/10/20",
+            "toHit": 0,
+            "toDam": 0
         },
         "armor": {
             "weight": 0,

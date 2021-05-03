@@ -6,16 +6,19 @@
             "bludgeoning": "Bludgeoning"
         },
         "weapon": {
+            "weapon": "Weapon",
+            "toHit": "To Hit",
+            "toDam": "To Dam",
             "weight": "Weight",
             "size": "Size",
-            "type": "Damage Type",
-            "speed": "Iniative Modifier",
+            "type": "Type",
+            "speed": "Speed",
             "damage": "Damage",
             "reach": "Reach",
             "shortRange": "Short Range",
             "mediumRange": "Medium Range",
             "longRange": "Long Range",
-            "range": "Range (Yards)",
+            "range": "Range",
             "rateOfFire": "Rate of Fire",
             "magicBonus": "Magic Bonus",
             "strengthHit": "Strength Bonus Applies to Hit",
@@ -100,6 +103,13 @@
                 "surpriseAdjust": "Suprise Adjust",
                 "illusionImmunity": "Illusion Immunity"
             }
+        },
+        "sheet": {
+            "description": "Description",
+            "weapons": "Weapons",
+            "createWeapon": "Create Weapon",
+            "editWeapon": "Edit Weapon",
+            "deleteWeapon": "Delete Weapon"
         }
     }
 }

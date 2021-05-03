@@ -1,81 +1,128 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <section class="character-header">
-        <section class="row row1">
-            <div class="form-text"><label for="playerName">{{localize "adnd2n.character.playerName"}}</label><input id="playerName" type="text" value="{{actor.playerName}}"/></div>
-            <div class="form-text"><label for="characterName">{{localize "adnd2n.character.characterName"}}</label><input id="characterName" type="text" value="{{actor.characterName}}"/></div>
-        </section>
-        <section class="row row2">
-            <div class="form-text"><label for="race">{{localize "adnd2n.character.race"}}</label><input id="race" type="text" value="{{actor.race}}"/></div>
-            <div class="form-text"><label for="movementSpeed">{{localize "adnd2n.character.movementSpeed"}}</label><input id="movementSpeed" type="text" value="{{actor.movementSpeed}}"/></div>
-            <div class="form-text"><label for="class">{{localize "adnd2n.character.class"}}</label><input id="class" type="text" value="{{actor.class}}"/></div>
-            <div class="form-text"><label for="alignment">{{localize "adnd2n.character.alignment"}}</label><input id="alignment" type="text" value="{{actor.alignment}}"/></div>
-        </section>
-        <section class="row row3">
-            <div class="form-text"><label for="hair">{{localize "adnd2n.character.appearance.hair"}}</label><input id="hair" type="text" value="{{actor.hair}}"/></div>
-            <div class="form-text"><label for="eyes">{{localize "adnd2n.character.appearance.eyes"}}</label><input id="eyes" type="text" value="{{actor.eyes}}"/></div>
-            <div class="form-text"><label for="size">{{localize "adnd2n.character.size"}}</label><input id="size" type="text" value="{{actor.size}}"/></div>
-            <div class="form-text"><label for="sex">{{localize "adnd2n.character.appearance.sex"}}</label><input id="sex" type="text" value="{{actor.sex}}"/></div>
-        </section>
-        <section class="row row4">
-            <div class="form-text"><label for="appearance">{{localize "adnd2n.character.appearance.misc"}}</label><input id="appearance" type="text" value="{{actor.misc}}"/></div>
-            <div class="form-text"><label for="age">{{localize "adnd2n.character.age"}}</label><input id="age" type="text" value="{{actor.age}}"/></div>
-            <div class="form-text"><label for="handed">{{localize "adnd2n.character.handed"}}</label><input id="handed" type="text" value="{{actor.handed}}"/></div>
-        </section>
-    </section>
-    <br>
-    <section class="character-stats">
-        <section class="row strength">
-            <div class="attribute">{{localize "adnd2n.attributes.strength.str"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.strength.value}}"></input></div>
-            <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.strength.hitAdjust"}}</label><input id="hitAdjust" type="text" value="{{actor.attributes.strength.hitAdjust}}"></input></div>
-            <div class="form-text"><label for="damageAdjust">{{localize "adnd2n.attributes.strength.damageAdjust"}}</label><input id="damageAdjust" type="text" value="{{actor.attributes.strength.damageAdjust}}"></input></div>
-            <div class="form-text"><label for="weightAllowance">{{localize "adnd2n.attributes.strength.weightAllowance"}}</label><input id="weightAllowance" type="text" value="{{actor.attributes.strength.weightAllowance}}"></input></div>
-            <div class="form-text"><label for="maxPress">{{localize "adnd2n.attributes.strength.maxPress"}}</label><input id="maxPress" type="text" value="{{actor.attributes.strength.maxPress}}"></input></div>
-            <div class="form-text"><label for="openDoors">{{localize "adnd2n.attributes.strength.openDoors"}}</label><input id="openDoors" type="text" value="{{actor.attributes.strength.openDoors}}"></input></div>
-            <div class="form-text"><label for="bendBars">{{localize "adnd2n.attributes.strength.bendBars"}}</label><input id="bendBars" type="text" value="{{actor.attributes.strength.bendBars}}"></input></div>
-        </section>
-        <section class="row dexterity">
-            <div class="attribute">{{localize "adnd2n.attributes.dexterity.dex"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.dexterity.value}}"></input></div>
-            <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.dexterity.hitAdjust"}}</label><input id="hitAdjust" type="text" value="{{actor.attributes.dexterity.hitAdjust}}"></input></div>
-            <div class="form-text"><label for="defAdjust">{{localize "adnd2n.attributes.dexterity.defAdjust"}}</label><input id="defAdjust" type="text" value="{{actor.attributes.dexterity.defAdjust}}"></input></div>
-        </section>
-        <section class="row constitution">
-            <div class="attribute">{{localize "adnd2n.attributes.constitution.con"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.constitution.value}}"></input></div>
-            <div class="form-text"><label for="hpAdjust">{{localize "adnd2n.attributes.constitution.hpAdjust"}}</label><input id="hpAdjust" type="text" value="{{actor.attributes.constitution.hpAdjust}}"></input></div>
-            <div class="form-text"><label for="systemShock">{{localize "adnd2n.attributes.constitution.systemShock"}}</label><input id="systemShock" type="text" value="{{actor.attributes.constitution.systemShock}}"></input></div>
-            <div class="form-text"><label for="resurrectionSurvival">{{localize "adnd2n.attributes.constitution.resurrectionSurvival"}}</label><input id="resurrectionSurvival" type="text" value="{{actor.attributes.constitution.resurrectionSurvival}}"></input></div>
-            <div class="form-text"><label for="poisonSave">{{localize "adnd2n.attributes.constitution.poisonSave"}}</label><input id="poisonSave" type="text" value="{{actor.attributes.constitution.poisonSave}}"></input></div>
-            <div class="form-text"><label for="regeneration">{{localize "adnd2n.attributes.constitution.regeneration"}}</label><input id="regeneration" type="text" value="{{actor.attributes.constitution.regeneration}}"></input></div>
-        </section>
-        <section class="row intelligence">
-            <div class="attribute">{{localize "adnd2n.attributes.intelligence.int"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.intelligence.value}}"></input></div>
-            <div class="form-text"><label for="languages">{{localize "adnd2n.attributes.intelligence.languages"}}</label><input id="languages" type="text" value="{{actor.attributes.intelligence.languages}}"></input></div>
-            <div class="form-text"><label for="maxSpellLevel">{{localize "adnd2n.attributes.intelligence.maxSpellLevel"}}</label><input id="maxSpellLevel" type="text" value="{{actor.attributes.intelligence.maxSpellLevel}}"></input></div>
-            <div class="form-text"><label for="spellLearnChance">{{localize "adnd2n.attributes.intelligence.spellLearnChance"}}</label><input id="spellLearnChance" type="text" value="{{actor.attributes.intelligence.spellLearnChance}}"></input></div>
-            <div class="form-text"><label for="maxSpellsPerLevel">{{localize "adnd2n.attributes.intelligence.maxSpellsPerLevel"}}</label><input id="maxSpellsPerLevel" type="text" value="{{actor.attributes.intelligence.maxSpellsPerLevel}}"></input></div>
-        </section>
-        <section class="row willpower">
-            <div class="attribute">{{localize "adnd2n.attributes.willpower.wil"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.willpower.value}}"></input></div>
-            <div class="form-text"><label for="defAdjust">{{localize "adnd2n.attributes.willpower.defAdjust"}}</label><input id="defAdjust" type="text" value="{{actor.attributes.willpower.defAdjust}}"></input></div>
-            <div class="form-text"><label for="bonusSpells">{{localize "adnd2n.attributes.willpower.bonusSpells"}}</label><input id="bonusSpells" type="text" value="{{actor.attributes.willpower.bonusSpells}}"></input></div>
-            <div class="form-text"><label for="spellFailure">{{localize "adnd2n.attributes.willpower.spellFailure"}}</label><input id="spellFailure" type="text" value="{{actor.attributes.willpower.spellFailure}}"></input></div>
-        </section>
-        <section class="row charisma">
-            <div class="attribute">{{localize "adnd2n.attributes.charisma.chr"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.charisma.value}}"></input></div>
-            <div class="form-text"><label for="henchmen">{{localize "adnd2n.attributes.charisma.henchmen"}}</label><input id="henchmen" type="text" value="{{actor.attributes.charisma.henchmen}}"></input></div>
-            <div class="form-text"><label for="loyaltyBase">{{localize "adnd2n.attributes.charisma.loyaltyBase"}}</label><input id="loyaltyBase" type="text" value="{{actor.attributes.charisma.loyaltyBase}}"></input></div>
-            <div class="form-text"><label for="reactionAdjust">{{localize "adnd2n.attributes.charisma.reactionAdjust"}}</label><input id="reactionAdjust" type="text" value="{{actor.attributes.charisma.reactionAdjust}}"></input></div>
-        </section>
-        <section class="row perception">
-            <div class="attribute">{{localize "adnd2n.attributes.perception.pcp"}}</div>
-            <div class="value"><input type="text" value="{{actor.attributes.perception.value}}"></input></div>
-            <div class="form-text"><label for="surpriseAdjust">{{localize "adnd2n.attributes.perception.surpriseAdjust"}}</label><input id="surpriseAdjust" type="text" value="{{actor.attributes.perception.surpriseAdjust}}"></input></div>
-            <div class="form-text"><label for="illusionImmunity">{{localize "adnd2n.attributes.perception.illusionImmunity"}}</label><input id="illusionImmunity" type="text" value="{{actor.attributes.perception.illusionImmunity}}"></input></div>
-        </section>
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a data-tab="description">{{localize "adnd2n.sheet.description"}}</a>
+        <a data-tab="weapons">{{localize "adnd2n.sheet.weapons"}}</a>
+    </nav>
+    <section class="sheet-body">
+        <div class="tab description" data-group="primary" data-tab="description">
+            <section class="character-header">
+                <section class="row row1">
+                    <div class="form-text"><label for="playerName">{{localize "adnd2n.character.playerName"}}</label><input name="data.playerName" id="playerName" type="text" value="{{data.playerName}}"/></div>
+                    <div class="form-text"><label for="characterName">{{localize "adnd2n.character.characterName"}}</label><input name="data.characterName" id="characterName" type="text" value="{{data.characterName}}"/></div>
+                </section>
+                <section class="row row2">
+                    <div class="form-text"><label for="race">{{localize "adnd2n.character.race"}}</label><input name="data.race" id="race" type="text" value="{{data.race}}"/></div>
+                    <div class="form-text"><label for="movementSpeed">{{localize "adnd2n.character.movementSpeed"}}</label><input name="data.movementSpeed" id="movementSpeed" type="text" value="{{data.movementSpeed}}"/></div>
+                    <div class="form-text"><label for="class">{{localize "adnd2n.character.class"}}</label><input name="data.class" id="class" type="text" value="{{data.class}}"/></div>
+                    <div class="form-text"><label for="alignment">{{localize "adnd2n.character.alignment"}}</label><input name="data.alignment" id="alignment" type="text" value="{{data.alignment}}"/></div>
+                </section>
+                <section class="row row3">
+                    <div class="form-text"><label for="hair">{{localize "adnd2n.character.appearance.hair"}}</label><input name="data.hair" id="hair" type="text" value="{{data.hair}}"/></div>
+                    <div class="form-text"><label for="eyes">{{localize "adnd2n.character.appearance.eyes"}}</label><input name="data.eyes" id="eyes" type="text" value="{{data.eyes}}"/></div>
+                    <div class="form-text"><label for="size">{{localize "adnd2n.character.size"}}</label><input name="data.size" id="size" type="text" value="{{data.size}}"/></div>
+                    <div class="form-text"><label for="sex">{{localize "adnd2n.character.appearance.sex"}}</label><input name="data.sex" id="sex" type="text" value="{{data.sex}}"/></div>
+                </section>
+                <section class="row row4">
+                    <div class="form-text"><label for="appearance">{{localize "adnd2n.character.appearance.misc"}}</label><input name="data.misc" id="appearance" type="text" value="{{data.misc}}"/></div>
+                    <div class="form-text"><label for="age">{{localize "adnd2n.character.age"}}</label><input name="data.age" id="age" type="text" value="{{data.age}}"/></div>
+                    <div class="form-text"><label for="handed">{{localize "adnd2n.character.handed"}}</label><input name="data.handed" id="handed" type="text" value="{{data.handed}}"/></div>
+                </section>
+            </section>
+            <br>
+            <section class="character-stats">
+                <section class="row strength">
+                    <div class="attribute">{{localize "adnd2n.attributes.strength.str"}}</div>
+                    <div class="value"><input name="data.attributes.strength.value" type="text" value="{{data.attributes.strength.value}}"></input></div>
+                    <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.strength.hitAdjust"}}</label><input name="data.attributes.strength.hitAdjust" id="hitAdjust" type="text" value="{{data.attributes.strength.hitAdjust}}" readonly></input></div>
+                    <div class="form-text"><label for="damageAdjust">{{localize "adnd2n.attributes.strength.damageAdjust"}}</label><input name="data.attributes.strength.damageAdjust" id="damageAdjust" type="text" value="{{data.attributes.strength.damageAdjust}}" readonly></input></div>
+                    <div class="form-text"><label for="weightAllowance">{{localize "adnd2n.attributes.strength.weightAllowance"}}</label><input name="data.attributes.strength.weightAllowance" id="weightAllowance" type="text" value="{{data.attributes.strength.weightAllowance}}"  readonly></input></div>
+                    <div class="form-text"><label for="maxPress">{{localize "adnd2n.attributes.strength.maxPress"}}</label><input name="data.attributes.strength.maxPress" id="maxPress" type="text" value="{{data.attributes.strength.maxPress}}"  readonly></input></div>
+                    <div class="form-text"><label for="openDoors">{{localize "adnd2n.attributes.strength.openDoors"}}</label><input name="data.attributes.strength.openDoors" id="openDoors" type="text" value="{{data.attributes.strength.openDoors}}"  readonly></input></div>
+                    <div class="form-text"><label for="bendBars">{{localize "adnd2n.attributes.strength.bendBars"}}</label><input name="data.attributes.strength.bendBars" id="bendBars" type="text" value="{{data.attributes.strength.bendBars}}%"  readonly></input></div>
+                </section>
+                <section class="row dexterity">
+                    <div class="attribute">{{localize "adnd2n.attributes.dexterity.dex"}}</div>
+                    <div class="value"><input name="data.attributes.dexterity.value" type="text" value="{{data.attributes.dexterity.value}}"></input></div>
+                    <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.dexterity.hitAdjust"}}</label><input name="data.attributes.dexterity.hitAdjust" id="hitAdjust" type="text" value="{{data.attributes.dexterity.hitAdjust}}"  readonly></input></div>
+                    <div class="form-text"><label for="defAdjust">{{localize "adnd2n.attributes.dexterity.defAdjust"}}</label><input name="data.attributes.dexterity.hitAdjust" id="defAdjust" type="text" value="{{data.attributes.dexterity.hitAdjust}}"  readonly></input></div>
+                </section>
+                <section class="row constitution">
+                    <div class="attribute">{{localize "adnd2n.attributes.constitution.con"}}</div>
+                    <div class="value"><input name="data.attributes.constitution.value" type="text" value="{{data.attributes.constitution.value}}"></input></div>
+                    <div class="form-text"><label for="hpAdjust">{{localize "adnd2n.attributes.constitution.hpAdjust"}}</label><input name="data.attributes.constitution.hpAdjust" id="hpAdjust" type="text" value="{{data.attributes.constitution.hpAdjust}}"  readonly></input></div>
+                    <div class="form-text"><label for="systemShock">{{localize "adnd2n.attributes.constitution.systemShock"}}</label><input name="data.attributes.constitution.systemShock" id="systemShock" type="text" value="{{data.attributes.constitution.systemShock}}%"  readonly></input></div>
+                    <div class="form-text"><label for="resurrectionSurvival">{{localize "adnd2n.attributes.constitution.resurrectionSurvival"}}</label><input name="data.attributes.constitution.resurrectionSurvival" id="resurrectionSurvival" type="text" value="{{data.attributes.constitution.resurrectionSurvival}}%"  readonly></input></div>
+                    <div class="form-text"><label for="poisonSave">{{localize "adnd2n.attributes.constitution.poisonSave"}}</label><input name="data.attributes.constitution.poisonSave" id="poisonSave" type="text" value="{{data.attributes.constitution.poisonSave}}"  readonly></input></div>
+                    <div class="form-text"><label for="regeneration">{{localize "adnd2n.attributes.constitution.regeneration"}}</label><input name="data.attributes.constitution.regeneration" id="regeneration" type="text" value="{{data.attributes.constitution.regeneration}}"  readonly></input></div>
+                </section>
+                <section class="row intelligence">
+                    <div class="attribute">{{localize "adnd2n.attributes.intelligence.int"}}</div>
+                    <div class="value"><input name="data.attributes.intelligence.value" type="text" value="{{data.attributes.intelligence.value}}"></input></div>
+                    <div class="form-text"><label for="languages">{{localize "adnd2n.attributes.intelligence.languages"}}</label><input name="data.attributes.intelligence.languages" id="languages" type="text" value="{{data.attributes.intelligence.languages}}"  readonly></input></div>
+                    <div class="form-text"><label for="maxSpellLevel">{{localize "adnd2n.attributes.intelligence.maxSpellLevel"}}</label><input name="data.attributes.intelligence.maxSpellLevel" id="maxSpellLevel" type="text" value="{{data.attributes.intelligence.maxSpellLevel}}"  readonly></input></div>
+                    <div class="form-text"><label for="spellLearnChance">{{localize "adnd2n.attributes.intelligence.spellLearnChance"}}</label><input name="data.attributes.intelligence.spellLearnChance" id="spellLearnChance" type="text" value="{{data.attributes.intelligence.spellLearnChance}}%"  readonly></input></div>
+                    <div class="form-text"><label for="maxSpellsPerLevel">{{localize "adnd2n.attributes.intelligence.maxSpellsPerLevel"}}</label><input name="data.attributes.intelligence.maxSpellsPerLevel" id="maxSpellsPerLevel" type="text" value="{{data.attributes.intelligence.maxSpellsPerLevel}}"  readonly></input></div>
+                </section>
+                <section class="row willpower">
+                    <div class="attribute">{{localize "adnd2n.attributes.willpower.wil"}}</div>
+                    <div class="value"><input name="data.attributes.willpower.value" type="text" value="{{data.attributes.willpower.value}}"></input></div>
+                    <div class="form-text"><label for="defAdjust">{{localize "adnd2n.attributes.willpower.defAdjust"}}</label><input name="data.attributes.willpower.defAdjust" id="defAdjust" type="text" value="{{data.attributes.willpower.defAdjust}}"  readonly></input></div>
+                    <div class="form-text"><label for="bonusSpells">{{localize "adnd2n.attributes.willpower.bonusSpells"}}</label><input name="data.attributes.willpower.bonusSpellsPrintable" id="bonusSpells" type="text" value="{{data.attributes.willpower.bonusSpellsPrintable}}"  readonly></input></div>
+                    <div class="form-text"><label for="spellFailure">{{localize "adnd2n.attributes.willpower.spellFailure"}}</label><input name="data.attributes.willpower.spellFailure" id="spellFailure" type="text" value="{{data.attributes.willpower.spellFailure}}%"  readonly></input></div>
+                </section> 
+                <section class="row charisma">
+                    <div class="attribute">{{localize "adnd2n.attributes.charisma.chr"}}</div>
+                    <div class="value"><input name="data.attributes.charisma.value" type="text" value="{{data.attributes.charisma.value}}"></input></div>
+                    <div class="form-text"><label for="henchmen">{{localize "adnd2n.attributes.charisma.henchmen"}}</label><input name="data.attributes.charisma.henchmen" id="henchmen" type="text" value="{{data.attributes.charisma.henchmen}}"  readonly></input></div>
+                    <div class="form-text"><label for="loyaltyBase">{{localize "adnd2n.attributes.charisma.loyaltyBase"}}</label><input name="data.attributes.charisma.loyaltyBase" id="loyaltyBase" type="text" value="{{data.attributes.charisma.loyaltyBase}}"  readonly></input></div>
+                    <div class="form-text"><label for="reactionAdjust">{{localize "adnd2n.attributes.charisma.reactionAdjust"}}</label><input name="data.attributes.charisma.reactionAdjust" id="reactionAdjust" type="text" value="{{data.attributes.charisma.reactionAdjust}}"  readonly></input></div>
+                </section>
+                <section class="row perception">
+                    <div class="attribute">{{localize "adnd2n.attributes.perception.pcp"}}</div>
+                    <div class="value"><input name="data.attributes.perception.value" type="text" value="{{data.attributes.perception.value}}"></input></div>
+                    <div class="form-text"><label for="surpriseAdjust">{{localize "adnd2n.attributes.perception.surpriseAdjust"}}</label><input name="data.attributes.perception.surpriseAdjust" id="surpriseAdjust" type="text" value="{{data.attributes.perception.surpriseAdjust}}"  readonly></input></div>
+                    <div class="form-text"><label for="illusionImmunity">{{localize "adnd2n.attributes.perception.illusionImmunity"}}</label><input name="data.attributes.perception.illusionImmunity" id="illusionImmunity" type="text" value="{{data.attributes.perception.illusionImmunity}} level"  readonly></input></div>
+                </section>
+            </section>
+        </div>
+        <div class="tab weapons", data-group="primary", data-tab="weapons">
+            <section class="weapon-list">
+                <table>
+                    <tr class="flexrow weapon-header">
+                        <th class="weapon-name">{{localize "adnd2n.weapon.weapon"}}</th>
+                        <th class="weapon-toHit">{{localize "adnd2n.weapon.toHit"}}</th>
+                        <th class="weapon-toDam">{{localize "adnd2n.weapon.toDam"}}</th>    
+                        <th class="weapon-damage">{{localize "adnd2n.weapon.damage"}}</th>
+                        <th class="weapon-range">{{localize "adnd2n.weapon.range"}}</th>
+                        <th class="weapon-type">{{localize "adnd2n.weapon.type"}}</th>
+                        <th class="weapon-speed">{{localize "adnd2n.weapon.speed"}}</th>
+                        <th class="weapon-controls">
+                            <a class="weapon-control weapon-create" title="createWeapon" data-type="weapon"><i class="fas fa-plus"></i></a>
+                        </th>
+                    </tr>
+                    {{#each actor.items as |item id|}}
+                    {{#ifEquals item.type "weapon"}}
+                    <tr class ="flexrow weapon" data-item-id="{{item._id}}">
+                        <td class="weapon-stat weapon-name">{{item.name}}</td>
+                        <td class="weapon-stat weapon-toHit">{{concat '+' item.data.toHit}}</td>
+                        <td class="weapon-stat weapon-toDam">{{concat '+' item.data.toDam}}</td>
+                        <td class="weapon-stat weapon-damage">{{item.data.damage}}</td>
+                        {{#unless item.data.reach}}
+                        <td class="weapon-stat weapon-range">{{concat item.data.shortRange '/' item.data.mediumRange '/' item.data.longRange 'yds'}}</td>
+                        {{else}}
+                        <td class="weapon-stat weapon-range">{{item.data.reach}}</td>
+                        {{/unless}}
+                        <td class="weapon-stat weapon-type">{{localize (concat 'adnd2n.attack.' item.data.type)}}</td>
+                        <td class="weapon-stat weapon-speed">{{item.data.speed}}</td>
+                        <td class="weapon-stat weapon-controls">
+                            <a class="weapon-control weapon-edit" title="editWeapon" data-type="item"><i class="fas fa-edit"></i></a>
+                            <a class="weapon-control weapon-delete" title="deleteWeapon" data-type="item"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/ifEquals}}
+                    {{/each}}
+                </table>
+            </section>
+        </div>
     </section>
 </form>

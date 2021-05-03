@@ -16,7 +16,7 @@
   padding-top: 1px;
 }
 .adnd2n.sheet.character .character-header .row1 #playerName {
-  padding-left: 11ch;
+  padding-left: 12ch;
 }
 .adnd2n.sheet.character .character-header .row1 #characterName {
   padding-left: 15ch;
@@ -110,6 +110,27 @@
 }
 .adnd2n.sheet.character .character-stats .perception {
   grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
+}
+.adnd2n.sheet.character .weapons .weapon-list {
+  text-align: center;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow {
+  display: flex;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-name {
+  flex: 2;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-controls {
+  flex: 0.3;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-toHit {
+  flex: 0.5;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-toDam {
+  flex: 0.5;
+}
+.adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-speed {
+  flex: 0.5;
 }
 .adnd2n.sheet.item form {
   display: flex;
