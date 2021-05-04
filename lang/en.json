@@ -24,7 +24,8 @@
             "strengthHit": "Strength Bonus Applies to Hit",
             "strengthDam": "Strength Bonus Applies to Damage",
             "dexterity": "Dexterity Bonus Applies to Hit",
-            "notes": "Notes"
+            "notes": "Notes",
+            "attack": "Attack"
         },
         "sizes": {
             "small": "Small",

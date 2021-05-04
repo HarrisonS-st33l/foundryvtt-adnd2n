@@ -24,13 +24,18 @@ export default class Adnd2nItem extends Item {
         }
         let cardData = {
             ...this.data,
-            owner: this.actor.id
+            owner: this.actor
         };
 
         console.log(cardData);
+
         chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
         chatData.roll=true;
 
         return ChatMessage.create(chatData);
+    }
+
+    async rollAttack() {
+        
     }
 }

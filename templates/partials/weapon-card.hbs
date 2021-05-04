@@ -1,5 +1,13 @@
-<li class="weapon-border chat-card {{data.type}}" data-type="{{data.type}}">
-    <header class="message-header flexrow">
-        <h4 class="message-sender">{{owner}}</h4>
+<div class="weapon-card">
+    <header class="card-header">
+        <img src="{{img}}" title="{{name}}" width="36" height="36"/>
+        <h3 class="weapon-name">{{name}}</h3>
     </header>
-</li>
+    <div class="card-content">
+        {{{data.description}}}
+    </div>
+    <div class="card-buttons">
+        <button data-action="attack">{{localize "adnd2n.weapon.attack"}}</button>
+        <button data-action="damage">{{localize "adnd2n.weapon.damage"}}</button>
+    </div>
+</div>
