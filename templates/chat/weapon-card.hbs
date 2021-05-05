@@ -1,4 +1,4 @@
-<div class="weapon-card">
+<div class="chat-card weapon" data-item-id="{{_id}}" data-owner-id="{{owner}}">
     <header class="card-header">
         <img src="{{img}}" title="{{name}}" width="36" height="36"/>
         <h3 class="weapon-name">{{name}}</h3>
@@ -7,7 +7,7 @@
         {{{data.description}}}
     </div>
     <div class="card-buttons">
-        <button data-action="attack">{{localize "adnd2n.weapon.attack"}}</button>
-        <button data-action="damage">{{localize "adnd2n.weapon.damage"}}</button>
+        <button class="attack">{{localize "adnd2n.weapon.attack"}}</button>
+        <button class="damage">{{localize "adnd2n.weapon.damage"}}</button>
     </div>
 </div>

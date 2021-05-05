@@ -10,11 +10,10 @@ export default class Adnd2nItem extends Item {
 
     _prepareWeaponData(itemData) {
         const data = itemData.data;
-        console.log(data);
     }
 
     chatTemplate = {
-        "weapon": "systems/adnd2n/templates/partials/weapon-card.hbs"
+        "weapon": "systems/adnd2n/templates/chat/weapon-card.hbs"
     };
 
     async roll() {
@@ -24,18 +23,12 @@ export default class Adnd2nItem extends Item {
         }
         let cardData = {
             ...this.data,
-            owner: this.actor
+            owner: this.actor.data._id
         };
-
-        console.log(cardData);
 
         chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
         chatData.roll=true;
 
         return ChatMessage.create(chatData);
-    }
-
-    async rollAttack() {
-        
     }
 }

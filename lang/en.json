@@ -111,6 +111,14 @@
             "createWeapon": "Create Weapon",
             "editWeapon": "Edit Weapon",
             "deleteWeapon": "Delete Weapon"
+        },
+        "chat": {
+            "attack": {
+                "title": "Attack ({weapon})"
+            },
+            "damage": {
+                "title": "Damage ({weapon})"
+            }
         }
     }
 }

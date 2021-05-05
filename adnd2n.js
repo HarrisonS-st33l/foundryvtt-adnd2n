@@ -3,6 +3,7 @@ import Adnd2nCharacterSheet from "./module/sheets/Adnd2nCharacterSheet.js";
 import Adnd2nActor from "./module/actor/actor.js";
 import Adnd2nItem from "./module/item/item.js";
 import { adnd2n } from "./module/config.js";
+import * as Chat from "./module/chat.js"
 
 
 Hooks.once("init", function () {
@@ -39,3 +40,5 @@ Hooks.once("init", function () {
         return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
     });
 });
+
+Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
