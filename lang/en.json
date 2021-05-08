@@ -114,11 +114,53 @@
         },
         "chat": {
             "attack": {
-                "title": "Attack ({weapon})"
+                "title": "Attack ({weapon})",
+                "options": {
+                    "modifier": "Modifier"
+                }
             },
             "damage": {
-                "title": "Damage ({weapon})"
+                "title": "Damage ({weapon})",
+                "options": {
+                    "modifier": "Modifier",
+                    "crit": "Critical Hit"
+                }
+            },
+            "abilityCheck": {
+                "title": "{type} Check",
+                "options": {
+                    "modifier": "Modifier"
+                }
+            },
+            "actions": {
+                "roll": "Roll",
+                "cancel": "Cancel"
+            },
+            "savingThrow": {
+                "title": "Saving Throw vs. {type}",
+                "passed": "Passed",
+                "failed": "Failed",
+                "options": {
+                    "modifier": "Modifier"
+                }
             }
+        },
+        "crits": {
+            "none": "None",
+            "single": "Single",
+            "double": "Double"
+        },
+        "savingThrows": {
+            "paralysation": "Paralysation",
+            "poison": "Poison",
+            "death": "Death",
+            "rod": "Rods",
+            "staffs": "Staffs",
+            "wand": "Wands",
+            "petrification": "Petrification",
+            "polymorph": "Polymorph",
+            "breathWeapon": "Breath Weapon",
+            "spell": "Spell"
         }
     }
 }

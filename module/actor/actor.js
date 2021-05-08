@@ -4,8 +4,8 @@ export default class Adnd2nActor extends Actor {
     prepareData() {
         super.prepareData();
 
-        const actorData = this.data;
-        const data = actorData.data;
+        let actorData = this.data;
+        let data = actorData.data;
         const flags = actorData.flags;
 
         if (actorData.type === 'character') this._prepareCharacterData(actorData);

@@ -1,0 +1,14 @@
+<form>
+    <div class="form-group">
+        <label>{{localize "adnd2n.chat.damage.options.modifier"}}</label>
+        <input type="text" name="modifier" value="0">
+        <label>{{localize "adnd2n.chat.damage.options.crit"}}</label>
+        <select name="crit">
+            {{#select crit}}
+            {{#each config.crits as |name crit|}}
+            <option value="{{crit}}">{{localize name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</form>

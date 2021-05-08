@@ -1,3 +1,5 @@
+import * as Dice from "../dice.js";
+
 export default class Adnd2nCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
@@ -33,6 +35,8 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
         if (this.actor.owner) {
             html.find('.rollable').click(this._onRoll.bind(this));
             html.find('.rollable-item').click(this._onRollItem.bind(this));
+            html.find('.rollable-attribute').click(this._onRollAttribute.bind(this));
+            html.find('.rollable-save').click(this._onRollSave.bind(this));
         }
     }
 
@@ -70,5 +74,19 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
         const ItemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(ItemID);
         item.roll();
+    }
+
+    _onRollAttribute(event) {
+        const card = event.currentTarget.closest('.row')
+        let ability = card.dataset.ability;
+        let actionValue = parseInt(this.actor.data.data.attributes[ability].value);
+        Dice.AbilityCheck({askForOptions: true, actionValue: actionValue, type: ability});
+    }
+
+    _onRollSave(event) {
+        const card = event.currentTarget.closest('.savingThrow');
+        let savingThrow = card.dataset.savingThrow;
+        let actionValue = parseInt(this.actor.data.data.savingThrows[savingThrow]);
+        Dice.SavingThrow({askForOptions: true, actionValue: actionValue, type: savingThrow});
     }
 }

@@ -11,3 +11,9 @@ adnd2n.sizes = {
     medium : "adnd2n.sizes.medium",
     large : "adnd2n.sizes.large"
 }
+
+adnd2n.crits = {
+    1 : "adnd2n.crits.none",
+    2: "adnd2n.crits.single",
+    3: "adnd2n.crits.double"
+}

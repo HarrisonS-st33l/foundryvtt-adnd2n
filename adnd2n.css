@@ -111,6 +111,18 @@
 .adnd2n.sheet.character .character-stats .perception {
   grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
 }
+.adnd2n.sheet.character .character-saves table {
+  width: 25%;
+}
+.adnd2n.sheet.character .character-saves td {
+  flex: 2;
+}
+.adnd2n.sheet.character .character-saves th {
+  flex: 8;
+}
+.adnd2n.sheet.character .character-saves tr {
+  display: flex;
+}
 .adnd2n.sheet.character .weapons .weapon-list {
   text-align: center;
 }

@@ -32,6 +32,13 @@ Hooks.once("init", function () {
         return str.toLowerCase();
     });
 
+    Handlebars.registerHelper('toTitleCase', function(str) {
+        return str.replace(/\w\S*/g,
+            function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+    });
+
     Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
         return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
     });

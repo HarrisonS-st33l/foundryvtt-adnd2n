@@ -15,7 +15,6 @@ export default class Adnd2nItemSheet extends ItemSheet {
         const data = super.getData();
         data.config = CONFIG.adnd2n;
         data.isOwned = this.object.isOwned;
-        console.log(data);
         return data;
     }
 }
