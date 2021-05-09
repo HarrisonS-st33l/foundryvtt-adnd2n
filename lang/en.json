@@ -47,7 +47,12 @@
             },
             "age": "Age",
             "handed": "Handed",
-            "size": "Size"
+            "size": "Size",
+            "hp": {
+                "max": "Max HP",
+                "current": "HP Remaining",
+                "temp": "Temp"
+            }
         },
         "attributes": {
             "abilityScore": "Ability Score",
@@ -138,8 +143,8 @@
             },
             "savingThrow": {
                 "title": "Saving Throw vs. {type}",
-                "passed": "Passed",
-                "failed": "Failed",
+                "passed": "Passed!",
+                "failed": "Failed!",
                 "options": {
                     "modifier": "Modifier"
                 }

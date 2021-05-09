@@ -8,8 +8,9 @@
             "base": {
                 "health": {
                     "value": 0,
-                    "min": 0,
-                    "max": 0
+                    "min": -10,
+                    "max": 0,
+                    "temp": 0
                 },
                 "movementSpeed": 12,
                 "alignment": "N",

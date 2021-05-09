@@ -72,20 +72,29 @@
 .adnd2n.sheet.character .character-header .row4 #handed {
   padding-left: 8ch;
 }
+.adnd2n.sheet.character .character-stats {
+  position: relative;
+}
 .adnd2n.sheet.character .character-stats .row {
   display: grid;
 }
-.adnd2n.sheet.character .character-stats .form-text {
-  position: relative;
+.adnd2n.sheet.character .character-stats .form-text input {
   height: 50px;
+  font-size: medium;
+  text-align: center;
+  padding-top: 2ch;
+}
+.adnd2n.sheet.character .character-stats .form-text label {
+  position: absolute;
+  font-size: smaller;
 }
 .adnd2n.sheet.character .character-stats .attribute {
   font-size: xx-large;
   text-align: center;
 }
-.adnd2n.sheet.character .character-stats label {
-  position: absolute;
-  font-size: smaller;
+.adnd2n.sheet.character .character-stats .value {
+  font-size: xx-large;
+  text-align: center;
 }
 .adnd2n.sheet.character .character-stats input {
   height: 50px;
@@ -111,17 +120,33 @@
 .adnd2n.sheet.character .character-stats .perception {
   grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
 }
-.adnd2n.sheet.character .character-saves table {
-  width: 25%;
+.adnd2n.sheet.character .character-combat-row {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
-.adnd2n.sheet.character .character-saves td {
-  flex: 2;
+.adnd2n.sheet.character .character-combat-row .character-saves .savingThrow {
+  text-align: end;
 }
-.adnd2n.sheet.character .character-saves th {
-  flex: 8;
+.adnd2n.sheet.character .character-combat-row .character-saves .savingThrow .savingThrow-value {
+  width: 3ch;
 }
-.adnd2n.sheet.character .character-saves tr {
-  display: flex;
+.adnd2n.sheet.character .character-combat-row .character-hp {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  position: relative;
+}
+.adnd2n.sheet.character .character-combat-row .character-hp input {
+  height: 100px;
+  text-align: center;
+}
+.adnd2n.sheet.character .character-combat-row .character-hp label {
+  position: absolute;
+}
+.adnd2n.sheet.character .character-combat-row .character-hp .maxHp {
+  text-align: end;
+}
+.adnd2n.sheet.character .character-combat-row .character-hp .currHp label {
+  text-align: center;
 }
 .adnd2n.sheet.character .weapons .weapon-list {
   text-align: center;

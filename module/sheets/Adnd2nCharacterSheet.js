@@ -3,6 +3,7 @@ import * as Dice from "../dice.js";
 export default class Adnd2nCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
+            width: 900,
             template: "systems/adnd2n/templates/sheets/character-sheet.hbs",
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
             classes: ["adnd2n", "sheet", "character"]

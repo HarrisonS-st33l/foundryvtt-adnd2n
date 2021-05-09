@@ -50,20 +50,29 @@
         }
     }
     .character-stats {
+        position: relative;
         .row {
             display: grid;
         }
         .form-text {
-            position: relative;
-            height: 50px;
+            input {
+                height: 50px;
+                font-size: medium;
+                text-align: center;
+                padding-top: 2ch;
+            }
+            label {
+                position: absolute;
+                font-size: smaller;
+            }
         }
         .attribute {
             font-size: xx-large;
             text-align: center;
         }
-        label {
-            position: absolute;
-            font-size: smaller;
+        .value {
+            font-size: xx-large;
+            text-align: center;
         }
         input {
             height: 50px;
@@ -90,18 +99,34 @@
             grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
         }
     }
-    .character-saves {
-        table {
-            width: 25%;
+    .character-combat-row {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        .character-saves {
+            .savingThrow {
+                text-align: end;
+                .savingThrow-value {
+                    width: 3ch; //FIXME make this work
+                }
+            }
         }
-        td {
-            flex: 2;
-        }
-        th {
-            flex: 8;
-        }
-        tr {
-            display: flex;
+        .character-hp {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            position: relative;
+            input{
+                height: 100px;
+                text-align: center;
+            }
+            label{
+                position: absolute;
+            }
+            .maxHp{
+                text-align: end;
+            }
+            .currHp label{
+                text-align: center;
+            }
         }
     }
     .weapons .weapon-list {
