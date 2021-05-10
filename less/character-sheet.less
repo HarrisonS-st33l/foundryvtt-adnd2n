@@ -54,29 +54,6 @@
         .row {
             display: grid;
         }
-        .form-text {
-            input {
-                height: 50px;
-                font-size: medium;
-                text-align: center;
-                padding-top: 2ch;
-            }
-            label {
-                position: absolute;
-                font-size: smaller;
-            }
-        }
-        .attribute {
-            font-size: xx-large;
-            text-align: center;
-        }
-        .value {
-            font-size: xx-large;
-            text-align: center;
-        }
-        input {
-            height: 50px;
-        }
         .strength {
             grid-template-columns: 10.916667% 9.416667% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778%;
         }
@@ -98,15 +75,51 @@
         .perception {
             grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
         }
+        .form-text {
+            border: solid 1px #7a7971;
+            background-color: rgba(0, 0, 0, 0.05);
+            font-size: medium;
+            padding: 0 0.2em;
+            height: 50px;
+            position: relative;
+            span {
+                text-align: center;
+                position: relative;
+                top: 1em;
+                width: 100px; //FIXME properly placed in the centre of the box
+            }
+            label {
+                position: absolute;
+                font-size: small; 
+            }
+        }
+        .attribute {
+            font-size: xx-large;
+            text-align: center;
+        }
+        .value {
+            font-size: xx-large;
+            text-align: center;
+        }
+        input {
+            height: 50px;
+        }
     }
     .character-combat-row {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 25% 1.5% 48.5% 1.5% 23.5%;
         .character-saves {
             .savingThrow {
+                border: solid 1px #7a7971;
                 text-align: end;
-                .savingThrow-value {
-                    width: 3ch; //FIXME make this work
+                .savingThrow-value{
+                    width: 3ch;
+                    input { 
+                        width: inherit;
+                        border: none;
+                        outline: 0;
+                        background-color: transparent;
+                    }
                 }
             }
         }

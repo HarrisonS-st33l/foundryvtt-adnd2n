@@ -78,27 +78,6 @@
 .adnd2n.sheet.character .character-stats .row {
   display: grid;
 }
-.adnd2n.sheet.character .character-stats .form-text input {
-  height: 50px;
-  font-size: medium;
-  text-align: center;
-  padding-top: 2ch;
-}
-.adnd2n.sheet.character .character-stats .form-text label {
-  position: absolute;
-  font-size: smaller;
-}
-.adnd2n.sheet.character .character-stats .attribute {
-  font-size: xx-large;
-  text-align: center;
-}
-.adnd2n.sheet.character .character-stats .value {
-  font-size: xx-large;
-  text-align: center;
-}
-.adnd2n.sheet.character .character-stats input {
-  height: 50px;
-}
 .adnd2n.sheet.character .character-stats .strength {
   grid-template-columns: 10.916667% 9.416667% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778% 13.277778%;
 }
@@ -120,15 +99,51 @@
 .adnd2n.sheet.character .character-stats .perception {
   grid-template-columns: 10.916667% 9.416667% 20.25% 59.416667%;
 }
+.adnd2n.sheet.character .character-stats .form-text {
+  border: solid 1px #7a7971;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: medium;
+  padding: 0 0.2em;
+  height: 50px;
+  position: relative;
+}
+.adnd2n.sheet.character .character-stats .form-text span {
+  text-align: center;
+  position: relative;
+  top: 1em;
+  width: 100px;
+}
+.adnd2n.sheet.character .character-stats .form-text label {
+  position: absolute;
+  font-size: small;
+}
+.adnd2n.sheet.character .character-stats .attribute {
+  font-size: xx-large;
+  text-align: center;
+}
+.adnd2n.sheet.character .character-stats .value {
+  font-size: xx-large;
+  text-align: center;
+}
+.adnd2n.sheet.character .character-stats input {
+  height: 50px;
+}
 .adnd2n.sheet.character .character-combat-row {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 25% 1.5% 48.5% 1.5% 23.5%;
 }
 .adnd2n.sheet.character .character-combat-row .character-saves .savingThrow {
+  border: solid 1px #7a7971;
   text-align: end;
 }
 .adnd2n.sheet.character .character-combat-row .character-saves .savingThrow .savingThrow-value {
   width: 3ch;
+}
+.adnd2n.sheet.character .character-combat-row .character-saves .savingThrow .savingThrow-value input {
+  width: inherit;
+  border: none;
+  outline: 0;
+  background-color: transparent;
 }
 .adnd2n.sheet.character .character-combat-row .character-hp {
   display: grid;

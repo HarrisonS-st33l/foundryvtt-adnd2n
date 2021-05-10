@@ -30,10 +30,11 @@
             </section>
             <br>
             <section class="character-stats">
+                <!--TODO change readonly inputs to spans-->
                 <section class="row strength" data-ability="strength">
                     <div class="attribute"><a class="rollable-attribute">{{localize "adnd2n.attributes.strength.str"}}</a></div>
                     <div class="value"><input name="data.attributes.strength.value" type="text" value="{{data.attributes.strength.value}}"></div>
-                    <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.strength.hitAdjust"}}</label><input name="data.attributes.strength.hitAdjust" id="hitAdjust" type="text" value="{{data.attributes.strength.hitAdjust}}" readonly></div>
+                    <div class="form-text"><label for="hitAdjust">{{localize "adnd2n.attributes.strength.hitAdjust"}}</label><span id="hitAdjust">{{data.attributes.strength.hitAdjust}}</span></div>
                     <div class="form-text"><label for="damageAdjust">{{localize "adnd2n.attributes.strength.damageAdjust"}}</label><input name="data.attributes.strength.damageAdjust" id="damageAdjust" type="text" value="{{data.attributes.strength.damageAdjust}}" readonly></div>
                     <div class="form-text"><label for="weightAllowance">{{localize "adnd2n.attributes.strength.weightAllowance"}}</label><input name="data.attributes.strength.weightAllowance" id="weightAllowance" type="text" value="{{data.attributes.strength.weightAllowance}}"  readonly></div>
                     <div class="form-text"><label for="maxPress">{{localize "adnd2n.attributes.strength.maxPress"}}</label><input name="data.attributes.strength.maxPress" id="maxPress" type="text" value="{{data.attributes.strength.maxPress}}"  readonly></div>
@@ -50,8 +51,8 @@
                     <div class="attribute"><a class="rollable-attribute">{{localize "adnd2n.attributes.constitution.con"}}</a></div>
                     <div class="value"><input name="data.attributes.constitution.value" type="text" value="{{data.attributes.constitution.value}}"></div>
                     <div class="form-text"><label for="hpAdjust">{{localize "adnd2n.attributes.constitution.hpAdjust"}}</label><input name="data.attributes.constitution.hpAdjust" id="hpAdjust" type="text" value="{{data.attributes.constitution.hpAdjust}}"  readonly></div>
-                    <div class="form-text"><a class="rollable" data-roll="d20<@attributes.constitution.systemShock"><label for="systemShock">{{localize "adnd2n.attributes.constitution.systemShock"}}</label><input name="data.attributes.constitution.systemShock" id="systemShock" type="text" value="{{data.attributes.constitution.systemShock}}%"  readonly></a></div>
-                    <div class="form-text"><a class="rollable" data-roll="d20<@attributes.constitution.resurrectionSurvival"><label for="resurrectionSurvival">{{localize "adnd2n.attributes.constitution.resurrectionSurvival"}}</label><input name="data.attributes.constitution.resurrectionSurvival" id="resurrectionSurvival" type="text" value="{{data.attributes.constitution.resurrectionSurvival}}%"  readonly></a></div>
+                    <div class="form-text"><a class="rollable" data-roll="d100<@attributes.constitution.systemShock"><label for="systemShock">{{localize "adnd2n.attributes.constitution.systemShock"}}</label><input name="data.attributes.constitution.systemShock" id="systemShock" type="text" value="{{data.attributes.constitution.systemShock}}%"  readonly></a></div>
+                    <div class="form-text"><a class="rollable" data-roll="d100<@attributes.constitution.resurrectionSurvival"><label for="resurrectionSurvival">{{localize "adnd2n.attributes.constitution.resurrectionSurvival"}}</label><input name="data.attributes.constitution.resurrectionSurvival" id="resurrectionSurvival" type="text" value="{{data.attributes.constitution.resurrectionSurvival}}%"  readonly></a></div>
                     <div class="form-text"><label for="poisonSave">{{localize "adnd2n.attributes.constitution.poisonSave"}}</label><input name="data.attributes.constitution.poisonSave" id="poisonSave" type="text" value="{{data.attributes.constitution.poisonSave}}"  readonly></div>
                     <div class="form-text"><label for="regeneration">{{localize "adnd2n.attributes.constitution.regeneration"}}</label><input name="data.attributes.constitution.regeneration" id="regeneration" type="text" value="{{data.attributes.constitution.regeneration}}"  readonly></div>
                 </section>
@@ -60,7 +61,7 @@
                     <div class="value"><input name="data.attributes.intelligence.value" type="text" value="{{data.attributes.intelligence.value}}"></div>
                     <div class="form-text"><label for="languages">{{localize "adnd2n.attributes.intelligence.languages"}}</label><input name="data.attributes.intelligence.languages" id="languages" type="text" value="{{data.attributes.intelligence.languages}}"  readonly></div>
                     <div class="form-text"><label for="maxSpellLevel">{{localize "adnd2n.attributes.intelligence.maxSpellLevel"}}</label><input name="data.attributes.intelligence.maxSpellLevel" id="maxSpellLevel" type="text" value="{{data.attributes.intelligence.maxSpellLevel}}"  readonly></div>
-                    <div class="form-text"><a class="rollable" data-roll="d20<@attributes.intelligence.spellLearnChance"><label for="spellLearnChance">{{localize "adnd2n.attributes.intelligence.spellLearnChance"}}</label><input name="data.attributes.intelligence.spellLearnChance" id="spellLearnChance" type="text" value="{{data.attributes.intelligence.spellLearnChance}}%"  readonly></a></div>
+                    <div class="form-text"><a class="rollable" data-roll="d100<@attributes.intelligence.spellLearnChance"><label for="spellLearnChance">{{localize "adnd2n.attributes.intelligence.spellLearnChance"}}</label><input name="data.attributes.intelligence.spellLearnChance" id="spellLearnChance" type="text" value="{{data.attributes.intelligence.spellLearnChance}}%"  readonly></a></div>
                     <div class="form-text"><label for="maxSpellsPerLevel">{{localize "adnd2n.attributes.intelligence.maxSpellsPerLevel"}}</label><input name="data.attributes.intelligence.maxSpellsPerLevel" id="maxSpellsPerLevel" type="text" value="{{data.attributes.intelligence.maxSpellsPerLevel}}"  readonly></div>
                 </section>
                 <section class="row willpower" data-ability="willpower">
@@ -68,7 +69,7 @@
                     <div class="value"><input name="data.attributes.willpower.value" type="text" value="{{data.attributes.willpower.value}}"></div>
                     <div class="form-text"><label for="defAdjust">{{localize "adnd2n.attributes.willpower.defAdjust"}}</label><input name="data.attributes.willpower.defAdjust" id="defAdjust" type="text" value="{{data.attributes.willpower.defAdjust}}"  readonly></div>
                     <div class="form-text"><label for="bonusSpells">{{localize "adnd2n.attributes.willpower.bonusSpells"}}</label><input name="data.attributes.willpower.bonusSpellsPrintable" id="bonusSpells" type="text" value="{{data.attributes.willpower.bonusSpellsPrintable}}"  readonly></div>
-                    <div class="form-text"><a class="rollable" data-roll="d20<@attributes.willpower.spellFailure"><label for="spellFailure">{{localize "adnd2n.attributes.willpower.spellFailure"}}</label><input name="data.attributes.willpower.spellFailure" id="spellFailure" type="text" value="{{data.attributes.willpower.spellFailure}}%"  readonly></a></div>
+                    <div class="form-text"><a class="rollable" data-roll="d100<@attributes.willpower.spellFailure"><label for="spellFailure">{{localize "adnd2n.attributes.willpower.spellFailure"}}</label><input name="data.attributes.willpower.spellFailure" id="spellFailure" type="text" value="{{data.attributes.willpower.spellFailure}}%"  readonly></a></div>
                 </section> 
                 <section class="row charisma" data-ability="charisma">
                     <div class="attribute"><a class="rollable-attribute">{{localize "adnd2n.attributes.charisma.chr"}}</a></div>
@@ -80,7 +81,7 @@
                 <section class="row perception" data-ability="perception">
                     <div class="attribute"><a class="rollable-attribute">{{localize "adnd2n.attributes.perception.pcp"}}</a></div>
                     <div class="value"><input name="data.attributes.perception.value" type="text" value="{{data.attributes.perception.value}}"></div>
-                    <div class="form-text"><a class="rollable" data-roll="d10+@attributes.perception.surpriseAdjust"><label for="surpriseAdjust">{{localize "adnd2n.attributes.perception.surpriseAdjust"}}</label><input name="data.attributes.perception.surpriseAdjust" id="surpriseAdjust" type="text" value="{{data.attributes.perception.surpriseAdjust}}"  readonly></a></div>
+                    <div class="form-text"><a class="rollable" data-roll="d10+@attributes.perception.surpriseAdjust"><label for="surpriseAdjust">{{localize "adnd2n.attributes.perception.surpriseAdjust"}}</label></a><input name="data.attributes.perception.surpriseAdjust" id="surpriseAdjust" type="text" value="{{data.attributes.perception.surpriseAdjust}}"  readonly></div>
                     <div class="form-text"><label for="illusionImmunity">{{localize "adnd2n.attributes.perception.illusionImmunity"}}</label><input name="data.attributes.perception.illusionImmunity" id="illusionImmunity" type="text" value="{{data.attributes.perception.illusionImmunity}}{{#ifNotEquals data.attributes.perception.illusionImmunity 'None'}} level{{/ifNotEquals}}"  readonly></div>
                 </section>
             </section>
@@ -96,10 +97,15 @@
                         {{/each}}   
                     </table>
                 </section>
+                <div></div>
                 <section class="character-hp">
                     <div class="maxHp"><label for"maxHp">{{localize "adnd2n.character.hp.max"}}</label><input id="maxHp" name="data.health.max" type="text" value={{data.health.max}}></div>
                     <div class="currHp"><label for"currHp">{{localize "adnd2n.character.hp.current"}}</label><input id="currHp" name="data.health.value" type="text" value={{data.health.value}}></div>
                     <div class="tempHp"><label for"tempHp">{{localize "adnd2n.character.hp.temp"}}</label><input id="tempHp" name="data.health.temp" type="text" value={{data.health.temp}}></div>
+                </section>
+                <div></div>
+                <section class="character-ac">
+
                 </section>
             </span>
         </div>

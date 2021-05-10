@@ -3,7 +3,7 @@ import * as Dice from "../dice.js";
 export default class Adnd2nCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            width: 900,
+            width: 1000,
             template: "systems/adnd2n/templates/sheets/character-sheet.hbs",
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
             classes: ["adnd2n", "sheet", "character"]
@@ -39,6 +39,7 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
             html.find('.rollable-attribute').click(this._onRollAttribute.bind(this));
             html.find('.rollable-save').click(this._onRollSave.bind(this));
         }
+        //TODO add proper rollables for derived attributes
     }
 
     _onItemCreate(event) {
