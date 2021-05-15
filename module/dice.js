@@ -320,3 +320,173 @@ function _processSavingThrowOptions(form) {
         modifier: parseInt(form.modifier.value)
     }
 }
+
+export async function SurpriseRoll({
+    actorData = null,
+    actionValue = null,
+    modifier = 0,
+    askForOptions = null} = {}) {
+
+    const messageTemplate = "systems/adnd2n/templates/chat/surprise-roll.hbs";
+
+    if (askForOptions) {
+        let checkOptions = await GetSurpriseRollOptions();
+        if (checkOptions.cancelled) {
+            return;
+        }
+        modifier = checkOptions.modifier;
+    }
+
+    let rollFormula = `1d10`;
+    
+    if (actionValue != 0) {
+        rollFormula += " + @actionValue";
+    }
+
+    if (modifier != 0) {
+        rollFormula += " + @modifier";
+    }
+    
+    let rollData = {
+        ...actorData,
+        modifier: modifier,
+        actionValue: actionValue
+    };
+
+    let rollResult = new Roll(rollFormula, rollData).roll();
+    let renderedRoll = await rollResult.render();
+
+    let templateContext = {
+        roll: renderedRoll,
+    }  
+
+    let chatData = {
+        speaker: ChatMessage.getSpeaker(),
+        content: await renderTemplate(messageTemplate, templateContext),
+        sound: CONFIG.sounds.dice,
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        roll: rollResult,
+    }
+
+    ChatMessage.create(chatData);
+}
+
+
+async function GetSurpriseRollOptions() {
+    const template = "systems/adnd2n/templates/chat/surprise-roll-dialog.hbs";
+    const html = await renderTemplate(template, {});
+
+    return new Promise(resolve => {
+        const data = {
+            title: game.i18n.format("adnd2n.chat.surpriseRoll.title"),
+            content: html,
+            buttons: {
+                normal: {
+                    label: game.i18n.localize("adnd2n.chat.actions.roll"),
+                    callback: html => resolve(_processSurpriseRollOptions(html[0].querySelector("form")))
+                },
+                cancel: {
+                    label: game.i18n.localize("adnd2n.chat.actions.cancel"),
+                    callback: html => resolve({cancelled: true})
+                }
+            },
+            default: "normal",
+            close: () => resolve({cancelled: true})
+        }
+
+        new Dialog(data, null).render(true);
+    });
+}
+
+function _processSurpriseRollOptions(form) {
+    return {
+        modifier: parseInt(form.modifier.value)
+    }
+}
+
+export async function DerivedAbilityCheck({
+    type = null,
+    actorData = null,
+    actionValue = null,
+    baseDice = null,
+    ability = null,
+    inverse = false,
+    modifier = 0,
+    askForOptions = null} = {}) {
+
+    const messageTemplate = "systems/adnd2n/templates/chat/derived-ability-check.hbs";
+
+    if (askForOptions) {
+        let checkOptions = await GetDerivedAbilityCheckOptions(type, ability);
+        if (checkOptions.cancelled) {
+            return;
+        }
+        modifier = checkOptions.modifier;
+    }
+
+    let rollFormula = `${baseDice}`;
+    
+    if (modifier != 0) {
+        rollFormula += " - @modifier";
+    }
+
+    let rollData = {
+        ...actorData,
+        modifier: modifier
+    };
+
+    let rollResult = new Roll(rollFormula, rollData).roll();
+    let success = (inverse ? (rollResult._total > actionValue) : (rollResult._total <= actionValue)) ? 'passed' : 'failed'; 
+    let renderedRoll = await rollResult.render();
+
+    let templateContext = {
+        type: type,
+        ability: ability,
+        roll: renderedRoll,
+        success: success
+    }  
+
+    let chatData = {
+        speaker: ChatMessage.getSpeaker(),
+        content: await renderTemplate(messageTemplate, templateContext),
+        sound: CONFIG.sounds.dice,
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        roll: rollResult,
+    }
+
+    ChatMessage.create(chatData);
+}
+
+
+async function GetDerivedAbilityCheckOptions(derivedAbilityCheck, ability) {
+    const template = "systems/adnd2n/templates/chat/derived-ability-check-dialog.hbs";
+    const html = await renderTemplate(template, {});
+    let derivedAbilityCheckName = game.i18n.localize(`adnd2n.attributes.${ability}.${derivedAbilityCheck}`);
+
+    return new Promise(resolve => {
+        const data = {
+            title: game.i18n.format("adnd2n.chat.derivedAbilityCheck.title", { type: derivedAbilityCheckName }),
+            content: html,
+            buttons: {
+                normal: {
+                    label: game.i18n.localize("adnd2n.chat.actions.roll"),
+                    callback: html => resolve(_processDerivedAbilityCheckOptions(html[0].querySelector("form")))
+                },
+                cancel: {
+                    label: game.i18n.localize("adnd2n.chat.actions.cancel"),
+                    callback: html => resolve({cancelled: true})
+                }
+            },
+            default: "normal",
+            close: () => resolve({cancelled: true})
+        }
+
+        new Dialog(data, null).render(true);
+    });
+}
+
+function _processDerivedAbilityCheckOptions(form) {
+    return {
+        modifier: parseInt(form.modifier.value)
+    }
+}

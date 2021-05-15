@@ -107,7 +107,8 @@
                 "perception": "Perception",
                 "pcp": "Pcp",
                 "surpriseAdjust": "Suprise Adjust",
-                "illusionImmunity": "Illusion Immunity"
+                "illusionImmunity": "Illusion Immunity",
+                "level": "level"
             }
         },
         "sheet": {
@@ -137,6 +138,14 @@
                     "modifier": "Modifier"
                 }
             },
+            "derivedAbilityCheck": {
+                "title": "{type} Check",
+                "passed": "Passed!",
+                "failed": "Failed!",
+                "options": {
+                    "modifier": "Modifier"
+                }  
+            },
             "actions": {
                 "roll": "Roll",
                 "cancel": "Cancel"
@@ -145,6 +154,12 @@
                 "title": "Saving Throw vs. {type}",
                 "passed": "Passed!",
                 "failed": "Failed!",
+                "options": {
+                    "modifier": "Modifier"
+                }
+            },
+            "surpriseRoll": {
+                "title": "Surprise Roll",
                 "options": {
                     "modifier": "Modifier"
                 }

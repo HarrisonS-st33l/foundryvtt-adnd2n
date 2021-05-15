@@ -38,6 +38,8 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
             html.find('.rollable-item').click(this._onRollItem.bind(this));
             html.find('.rollable-attribute').click(this._onRollAttribute.bind(this));
             html.find('.rollable-save').click(this._onRollSave.bind(this));
+            html.find('.rollable-derived').click(this._onRollDerived.bind(this));
+            html.find('.rollable-surprise').click(this._onRollSurprise.bind(this));
         }
         //TODO add proper rollables for derived attributes
     }
@@ -79,16 +81,32 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
     }
 
     _onRollAttribute(event) {
-        const card = event.currentTarget.closest('.row')
+        const card = event.currentTarget.closest('.row');
         let ability = card.dataset.ability;
         let actionValue = parseInt(this.actor.data.data.attributes[ability].value);
         Dice.AbilityCheck({askForOptions: true, actionValue: actionValue, type: ability});
     }
 
+    _onRollDerived(event) {
+        const a = event.currentTarget;
+        let ability = a.closest('.row').dataset.ability;
+        let score = a.lastElementChild.id;
+        let baseDice = a.dataset.base;
+        let inverse = a.dataset.inverse === "true";
+        let actionValue = parseInt(this.actor.data.data.attributes[ability][score]);
+        Dice.DerivedAbilityCheck({askForOptions: true, actionValue: actionValue, baseDice: baseDice, type: score, ability: ability, inverse: inverse});
+    }
+S
     _onRollSave(event) {
         const card = event.currentTarget.closest('.savingThrow');
         let savingThrow = card.dataset.savingThrow;
         let actionValue = parseInt(this.actor.data.data.savingThrows[savingThrow]);
         Dice.SavingThrow({askForOptions: true, actionValue: actionValue, type: savingThrow});
+    }
+
+    _onRollSurprise(event) {
+        const card = event.currentTarget;
+        let actionValue = parseInt(this.actor.data.data.attributes.perception.surpriseAdjust);
+        Dice.SurpriseRoll({askForOptions: true, actionValue: actionValue});
     }
 }
