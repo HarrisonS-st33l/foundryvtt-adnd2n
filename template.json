@@ -128,16 +128,17 @@
         "types": [
             "weapon",
             "armor",
-            "item"
+            "item",
+            "spell"
         ],
         "templates": {
-            "itemDescription": {
+            "item": {
+                "weight": 0,
                 "decription": ""
             }
         },
         "weapon": {
-            "templates": ["itemDescription"],
-            "weight": 0,
+            "templates": ["item"],
             "size": "M",
             "type": "slashing",
             "speed": 3,
@@ -152,11 +153,27 @@
             "toDam": 0
         },
         "armor": {
-            "weight": 0,
+            "templates": ["item"],
             "armorClass": 10
         },
-        "item": {
-            "weight": 0
+        "spell": {
+            "name": "",
+            "level": 1,
+            "school": "",
+            "verbal": true,
+            "somatic": true,   
+            "material": true,
+            "materials": "",
+            "range": "",
+            "aoe": "",
+            "castingTime": "",
+            "duration": "",
+            "save": "None",
+            "damage": "",
+            "description": "",
+            "rarity": "",
+            "residue": "",
+            "source": ""
         }
     }
 }

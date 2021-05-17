@@ -116,7 +116,8 @@
             "weapons": "Weapons",
             "createWeapon": "Create Weapon",
             "editWeapon": "Edit Weapon",
-            "deleteWeapon": "Delete Weapon"
+            "deleteWeapon": "Delete Weapon",
+            "spells": "Spells"
         },
         "chat": {
             "attack": {
@@ -181,6 +182,40 @@
             "polymorph": "Polymorph",
             "breathWeapon": "Breath Weapon",
             "spell": "Spell"
+        },
+        "spells": {
+            "somaticLetter": "S",
+            "materialLetter": "M",
+            "verbalLetter": "V",
+            "range": "Range",
+            "castingTime": "Casting Time",
+            "save": "Save",
+            "aoe": "AoE",
+            "duration": "Duration",
+            "damage": "Damage",
+            "materials": "Materials",
+            "residue": "Residue",
+            "rarity": {
+                "common": "Common",
+                "uncommon": "Uncommon",
+                "rare": "Rare"
+            },
+            "school": "School",
+            "schools": {
+                "invocation": "Invocation/Evocation",
+                "enchantment": "Enchantment/Charm",
+                "conjuration": "Conjuration/Summoning",
+                "abjuration": "Abjuration",
+                "necromancy": "Necromancy",
+                "illusion": "Illusion/Phantasm",
+                "alteration": "Alteration/Transmutation",
+                "divination": "Divination"
+            },
+            "source": "Source",
+            "level": "Level",
+            "somatic": "Somatic",
+            "verbal": "Verbal",
+            "material": "Material"
         }
     }
 }

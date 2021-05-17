@@ -5,6 +5,13 @@ import Adnd2nItem from "./module/item/item.js";
 import { adnd2n } from "./module/config.js";
 import * as Chat from "./module/chat.js"
 
+async function preloadHandlebarsTemplates() {
+    const templatePaths = [
+        "systems/adnd2n/templates/partials/spell-card.hbs"
+    ];
+
+    return loadTemplates(templatePaths);
+}
 
 Hooks.once("init", function () {
     console.log("adnd2n | Initialising AD&D 2.neal System");
@@ -17,6 +24,8 @@ Hooks.once("init", function () {
     Items.registerSheet("adnd2n", Adnd2nItemSheet, { makeDefault: true });
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("adnd2n", Adnd2nCharacterSheet, { makeDefault: true });
+
+    preloadHandlebarsTemplates();
 
     Handlebars.registerHelper('concat', function () {
         var outStr = '';

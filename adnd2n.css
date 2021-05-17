@@ -195,3 +195,21 @@
 .adnd2n.sheet.item .sheet-content .editor {
   height: 100%;
 }
+.spell-card {
+  width: 350px;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #000000;
+  font-size: 11px;
+  margin-bottom: 25px;
+  color: #333333;
+  position: relative;
+}
+.spell-card span {
+  display: none;
+}
+.spell-card span .verbal,
+.spell-card span .somatic,
+.spell-card span .material {
+  display: inline-block;
+}

@@ -1,0 +1,36 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="sheet-content">
+        <section class="row row1">
+            <div class="form-text"><label for="level">{{localize "adnd2n.spells.level"}}</label><input name="data.level" id="level" type="number" value="{{data.level}}"/></div>
+            <div class="form-text"><label for="somatic">{{localize "adnd2n.spells.somatic"}}</label><input name="data.somatic" id="somatic" type="checkbox" {{#if data.somatic}}checked{{/if}}/></div>
+            <div class="form-text"><label for="material">{{localize "adnd2n.spells.material"}}</label><input name="data.material" id="material" type="checkbox" {{#if data.material}}checked{{/if}}/></div>
+            <div class="form-text"><label for="verbal">{{localize "adnd2n.spells.verbal"}}</label><input name="data.verbal" id="verbal" type="checkbox" {{#if data.verbal}}checked{{/if}}/></div>
+        </section>
+        <section class="row row2">
+            <div class="form-text"><label for="range">{{localize "adnd2n.spells.range"}}</label><input name="data.range" id="range" type="text" value="{{data.range}}"/></div>
+            <div class="form-text"><label for="aoe">{{localize "adnd2n.spells.aoe"}}</label><input name="data.aoe" id="aoe" type="text" value="{{data.aoe}}"/></div>
+        </section>
+        <section class="row row3">
+            <div class="form-text"><label for="castingTime">{{localize "adnd2n.spells.castingTime"}}</label><input name="data.castingTime" id="castingTime" type="text" value="{{data.castingTime}}"/></div>
+            <div class="form-text"><label for="duration">{{localize "adnd2n.spells.duration"}}</label><input name="data.duration" id="duration" type="text" value="{{data.duration}}"/></div>
+        </section>
+        <section class="row row4">
+            <div class="form-text"><label for="save">{{localize "adnd2n.spells.save"}}</label><input name="data.save" id="save" type="text" value="{{data.save}}"/></div>
+            <div class="form-text"><label for="damage">{{localize "adnd2n.spells.damage"}}</label><input name="data.damage" id="damage" type="text" value="{{data.damage}}"/></div>
+        </section>
+        <section class="row row5">
+            <div class="form-text"><label for="materials">{{localize "adnd2n.spells.materials"}}</label><input name="data.materials" id="materials" type="text" value="{{data.materials}}"/></div>
+        </section>
+        <section class="row row6">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </section>
+        <br>
+        <section class="testing">
+            {{> "systems/adnd2n/templates/partials/spell-card.hbs"}}
+        </section>
+    </div>
+</form>

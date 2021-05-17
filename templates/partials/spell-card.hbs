@@ -1,0 +1,53 @@
+<div class="spell-card {{data.school}}" data-id={{data.id}} data-school={{data.school}} data-caster={{data.caster}}>
+    <header>
+        <div class="level">{{data.level}}</div>
+        <div class="components {{#if data.verbal}}verbal{{/if}} {{#if data.somatic}}somatic{{/if}} {{#if data.material}}material{{/if}}">
+            <span class="somatic">{{localize "adnd2n.spells.somaticLetter"}}</span>
+            <span class="material">{{localize "adnd2n.spells.materialLetter"}}</span>
+            <span class="verbal">{{localize "adnd2n.spells.verbalLetter"}}</span>
+        </div>
+        <div class="name">{{item.name}}</div>
+    </header>
+    <section>
+        <dl class="half">
+            <dt>{{localize "adnd2n.spells.range"}}</dt>
+            <dd class="range">{{data.range}}</dd>
+            <dt>{{localize "adnd2n.spells.castingTime"}}</dt>
+            <dd class="castingTime">{{data.castingTime}}</dd>
+            <dt>{{localize "adnd2n.spells.save"}}</dt>
+            <dd class="save">{{data.save}}</dd>
+        </dl>
+        <dl class="half">
+            <dt>{{localize "adnd2n.spells.aoe"}}</dt>
+            <dd class="aoe">{{data.aoe}}</dd>
+            <dt>{{localize "adnd2n.spells.duration"}}</dt>
+            <dd class="duration">{{data.duration}}</dd>
+            <dt>{{localize "adnd2n.spells.damage"}}</dt>
+            <dd class="damage">{{data.damage}}</dd>
+        </dl>
+        <dl class="full">
+            <dt>{{localize "adnd2n.spells.materials"}}</dt>
+            <dd class="materials">{{data.materials}}</dd>
+        </dl>
+        <div class="description">
+            <div class="description-content">
+                {{data.description}}
+            </div>
+        </div>
+        <dl class="label">
+            <dt>{{localize "adnd2n.spells.residue"}}</dt>
+            <dd>{{localize (concat "adnd2n.spells.rarity." data.rarity)}}</dd>
+        </dl>
+        <div class="description">
+            <div class="description-residue">{{data.residue}}</div>
+        </div>
+        <dl class="half bot">
+            <dt>{{localize "adnd2n.spells.school"}}</dt>
+            <dd>{{localize (concat "adnd2n.spells.schools." data.school)}}</dd>
+        </dl>
+        <dl class="half bot">
+            <td>{{localize "adnd2n.spells.source"}}</td>
+            <dd>{{data.source}}</dd>
+        </dl>
+    </section>
+</div>
