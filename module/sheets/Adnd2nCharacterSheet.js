@@ -41,7 +41,6 @@ export default class Adnd2nCharacterSheet extends ActorSheet {
             html.find('.rollable-derived').click(this._onRollDerived.bind(this));
             html.find('.rollable-surprise').click(this._onRollSurprise.bind(this));
         }
-        //TODO add proper rollables for derived attributes
     }
 
     _onItemCreate(event) {
