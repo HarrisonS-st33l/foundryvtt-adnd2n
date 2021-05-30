@@ -213,3 +213,21 @@
 .spell-card span .material {
   display: inline-block;
 }
+.spell-card .components {
+  float: right;
+  margin-right: 5px;
+}
+.spell-card .components span {
+  display: none;
+}
+.spell-card .components.verbal,
+.spell-card .components.somatic,
+.spell-card .components.material {
+  display: inline-block;
+}
+.spell-card header > div > span {
+  color: #aaaaaa;
+  padding: 0px 4px;
+  margin: 0px 2px;
+  font-weight: bold;
+}
