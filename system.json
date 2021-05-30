@@ -3,8 +3,8 @@
     "title": "Advanced Dungeons and Dragons 2.n",
     "description": "A System for playing D&D as Neal",
     "author": "mr st33l",
-    "version": "0.10",
-    "minimumCoreVersion": "0.7.10",
+    "version": "0.1.1",
+    "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.10",
     "esmodules": [
         "adnd2n.js"
@@ -25,8 +25,5 @@
     "gridDistance": "5",
     "gridUnits": "ft",
     "primaryTokenAttribute": "health",
-    "initiative": "1d10 + @speed",
-    "url": "https://github.com/HarrisonS-st33l/foundryvtt-adnd2n",
-    "manifest": "https://raw.githubusercontent.com/HarrisonS-st33l/foundryvtt-adnd2n/v0.1.0-alpha/system.json",
-    "download": "https://github.com/HarrisonS-st33l/foundryvtt-adnd2n/archive/refs/tags/v0.1.0-alpha.zip"
+    "initiative": "1d10 + @speed"
 }

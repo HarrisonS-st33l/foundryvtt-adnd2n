@@ -183,17 +183,20 @@
 .adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-speed {
   flex: 0.5;
 }
-.adnd2n.sheet.item form {
+.adnd2n.sheet.item {
+  min-width: 521px;
+  min-height: 300px;
+}
+.adnd2n.sheet.item form.weapon {
   display: flex;
   flex-direction: column;
 }
-.adnd2n.sheet.item .sheet-content {
+.adnd2n.sheet.item form.weapon .sheet-content {
   height: 100%;
-  display: flex;
   flex-direction: column;
 }
-.adnd2n.sheet.item .sheet-content .editor {
-  height: 100%;
+.adnd2n.sheet.item form.weapon .sheet-content .editor-content {
+  min-height: 75px;
 }
 .spell-card {
   width: 350px;
@@ -205,14 +208,6 @@
   color: #333333;
   position: relative;
 }
-.spell-card span {
-  display: none;
-}
-.spell-card span .verbal,
-.spell-card span .somatic,
-.spell-card span .material {
-  display: inline-block;
-}
 .spell-card .components {
   float: right;
   margin-right: 5px;
@@ -220,9 +215,9 @@
 .spell-card .components span {
   display: none;
 }
-.spell-card .components.verbal,
-.spell-card .components.somatic,
-.spell-card .components.material {
+.spell-card .components.somatic > .somatic,
+.spell-card .components.material > .material,
+.spell-card .components.verbal > .verbal {
   display: inline-block;
 }
 .spell-card header > div > span {
@@ -230,4 +225,214 @@
   padding: 0px 4px;
   margin: 0px 2px;
   font-weight: bold;
+}
+.spell-card header {
+  background: #cccccc;
+  position: relative;
+  font-size: 14px;
+  line-height: 25px;
+  height: 27px;
+}
+.spell-card header .level {
+  float: left;
+  border-top: 0px;
+  border-left: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-bottom-right-radius: 25px;
+  height: 25px;
+  width: 25px;
+  text-indent: -5px;
+  text-align: center;
+  font-weight: bold;
+  background: transparent;
+  color: inherit;
+}
+.spell-card header .name {
+  font-weight: bold;
+  text-indent: 5px;
+}
+.spell-card section {
+  padding: 5px 10px;
+  padding-bottom: 0px;
+}
+.spell-card dt {
+  font-weight: bold;
+}
+.spell-card dd {
+  margin-left: 0px;
+  height: 22px;
+  line-height: 13px;
+}
+.spell-card dl {
+  margin: 0px;
+}
+.spell-card dl.half {
+  float: left;
+  width: 50%;
+}
+.spell-card dl.bot dd {
+  height: 15px;
+}
+.spell-card dl.full {
+  clear: left;
+  height: 35px;
+}
+.spell-card dl.label {
+  clear: both;
+  position: relative;
+}
+.spell-card dl.label dd {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.spell-card .description {
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  background: #aaaaaa;
+  text-align: justify;
+}
+.spell-card .description .description-content {
+  height: 190px;
+  overflow: auto;
+  padding: 0 5px;
+}
+.spell-card .description .description-residue {
+  height: 26px;
+  overflow: auto;
+  padding: 0 5px;
+}
+.spell-card .consumed {
+  font-style: italic;
+}
+.spell-card.invocation > header {
+  background: #c20000;
+  color: white;
+  border-color: white !important;
+}
+.spell-card.invocation > header div > span {
+  color: white;
+}
+.spell-card.enchantment > header {
+  background: #00c200;
+  color: #333333;
+  border-color: #333333 !important;
+}
+.spell-card.enchantment > header div > span {
+  color: #333333;
+}
+.spell-card.conjuration > header {
+  background: #c200c2;
+  color: white;
+  border-color: white !important;
+}
+.spell-card.conjuration > header div > span {
+  color: white;
+}
+.spell-card.abjuration > header {
+  background: #cccccc;
+  color: #333333;
+  border-color: #333333 !important;
+}
+.spell-card.abjuration > header div > span {
+  color: #333333;
+}
+.spell-card.necromancy > header {
+  background: #666666;
+  color: #eeeeee;
+  border-color: #eeeeee !important;
+}
+.spell-card.necromancy > header div > span {
+  color: #eeeeee;
+}
+.spell-card.illusion > header {
+  background: #0000c2;
+  color: white;
+  border-color: white !important;
+}
+.spell-card.illusion > header div > span {
+  color: white;
+}
+.spell-card.alteration > header {
+  background: #00c2c2;
+  color: white;
+  border-color: white !important;
+}
+.spell-card.alteration > header div > span {
+  color: white;
+}
+.spell-card.divination > header {
+  background: #ffd700;
+  color: #333333;
+  border-color: #333333 !important;
+}
+.spell-card.divination > header div > span {
+  color: #333333;
+}
+.adnd2n.sheet.item form.spell .sheet-content {
+  position: relative;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row {
+  display: grid;
+}
+.adnd2n.sheet.item form.spell .sheet-content .form-text {
+  border: solid 1px #7a7971;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: medium;
+  height: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.adnd2n.sheet.item form.spell .sheet-content input {
+  height: 25px;
+  border: 1px 0 0 0;
+  outline: 0;
+  background-color: transparent;
+  flex: 1;
+}
+.adnd2n.sheet.item form.spell .sheet-content input[type=checkbox] {
+  height: 20px;
+  flex: 0.25;
+  margin: 0;
+}
+.adnd2n.sheet.item form.spell .sheet-content select {
+  height: 25px;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+  flex: 1;
+}
+.adnd2n.sheet.item form.spell .sheet-content label {
+  padding: 0 0 0 0;
+  font-size: small;
+  float: left;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row1 {
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row2 {
+  grid-template-columns: 50% 50%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row3 {
+  grid-template-columns: 50% 50%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row4 {
+  grid-template-columns: 50% 50%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row5 {
+  grid-template-columns: 50% 50%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row6 {
+  grid-template-columns: 100%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row7 {
+  grid-template-columns: 50% 50%;
+}
+.adnd2n.sheet.item form.spell .sheet-content .row8 {
+  grid-template-columns: 50% 50%;
 }

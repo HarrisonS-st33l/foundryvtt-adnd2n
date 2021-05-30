@@ -27,7 +27,7 @@
         </dl>
         <dl class="full">
             <dt>{{localize "adnd2n.spells.materials"}}</dt>
-            <dd class="materials">{{data.materials}}</dd>
+            <dd class="materials {{#if data.consumed}}consumed{{/if}}">{{data.materials}}</dd>
         </dl>
         <div class="description">
             <div class="description-content">
@@ -36,7 +36,7 @@
         </div>
         <dl class="label">
             <dt>{{localize "adnd2n.spells.residue"}}</dt>
-            <dd>{{localize (concat "adnd2n.spells.rarity." data.rarity)}}</dd>
+            <dd>{{localize (concat "adnd2n.spells.rarities." data.rarity)}}</dd>
         </dl>
         <div class="description">
             <div class="description-residue">{{data.residue}}</div>
@@ -46,7 +46,7 @@
             <dd>{{localize (concat "adnd2n.spells.schools." data.school)}}</dd>
         </dl>
         <dl class="half bot">
-            <td>{{localize "adnd2n.spells.source"}}</td>
+            <dt>{{localize "adnd2n.spells.source"}}</td>
             <dd>{{data.source}}</dd>
         </dl>
     </section>

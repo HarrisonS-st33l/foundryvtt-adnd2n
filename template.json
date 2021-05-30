@@ -164,6 +164,7 @@
             "somatic": true,   
             "material": true,
             "materials": "",
+            "consumed": true,
             "range": "",
             "aoe": "",
             "castingTime": "",

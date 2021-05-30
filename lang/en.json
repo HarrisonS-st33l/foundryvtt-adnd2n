@@ -195,7 +195,8 @@
             "damage": "Damage",
             "materials": "Materials",
             "residue": "Residue",
-            "rarity": {
+            "rarity": "Rarity",
+            "rarities": {
                 "common": "Common",
                 "uncommon": "Uncommon",
                 "rare": "Rare"
@@ -215,7 +216,9 @@
             "level": "Level",
             "somatic": "Somatic",
             "verbal": "Verbal",
-            "material": "Material"
+            "material": "Material",
+            "description": "Description",
+            "consumed": "Consumed"
         }
     }
 }

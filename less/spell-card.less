@@ -1,0 +1,175 @@
+.spell-card {
+    width: 350px;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #000000;
+    font-size: 11px;
+    margin-bottom: 25px;
+    color: #333333;
+    position: relative;
+    .components {
+        float: right;
+        margin-right: 5px;
+        span {
+            display: none;
+        }
+    }
+    .components.somatic > .somatic, .components.material > .material, .components.verbal > .verbal {
+        display: inline-block;
+    }
+    header > div > span {
+        color: #aaaaaa;
+        padding: 0px 4px;
+        margin: 0px 2px;
+        font-weight: bold;
+    }
+    header {
+        background: #cccccc;
+        position: relative;
+        font-size: 14px;
+        line-height: 25px;
+        height: 27px;
+        .level {
+            float: left;
+            border-top: 0px;
+            border-left: 0px;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+            border-right: 2px solid #333333;
+            border-bottom: 2px solid #333333;
+            border-bottom-right-radius: 25px;
+            height: 25px;
+            width: 25px;
+            text-indent: -5px;
+            text-align: center;
+            font-weight: bold;
+            background: transparent;
+            color: inherit;
+        }
+        .name {
+            font-weight: bold;
+            text-indent: 5px;
+        }
+    }
+    section {
+        padding: 5px 10px;
+        padding-bottom: 0px;
+    }
+    dt {
+        font-weight: bold;
+    }
+    dd {
+        margin-left: 0px;
+        height: 22px;
+        line-height: 13px;
+    }
+    dl {
+        margin: 0px;
+        
+    }
+    dl.half {
+        float: left;
+        width: 50%;
+    }
+    dl.bot dd{
+        height: 15px;
+    }
+    dl.full {
+        clear: left;
+        height: 35px;
+    }
+    dl.label {
+        clear: both;
+        position: relative;
+        dd {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    }
+    .description {
+        padding: 5px 0px;
+        margin-bottom: 10px;
+        background: #aaaaaa;
+        text-align: justify;
+        .description-content {
+            height: 190px;
+            overflow: auto;
+            padding: 0 5px;
+        }
+        .description-residue {
+            height: 26px;
+            overflow: auto;
+            padding: 0 5px;
+        }
+    }
+    .consumed {
+        font-style: italic;
+    }
+}
+
+.spell-card.invocation > header {
+    background: #c20000;
+    color: white;
+    border-color: white !important;
+    div > span {
+        color: white;
+    }
+}
+.spell-card.enchantment > header {
+    background: #00c200;
+    color: #333333;
+    border-color: #333333 !important;
+    div > span {
+        color: #333333;
+    }
+}
+.spell-card.conjuration > header {
+    background: #c200c2;
+    color: white;
+    border-color: white !important;
+    div > span {
+        color: white;
+    }
+}
+.spell-card.abjuration > header {
+    background: #cccccc;
+    color: #333333;
+    border-color: #333333 !important;
+    div > span {
+        color: #333333;
+    }
+}
+.spell-card.necromancy > header {
+    background: #666666;
+    color: #eeeeee;
+    border-color: #eeeeee !important;
+    div > span {
+        color: #eeeeee;
+    }
+}
+.spell-card.illusion > header {
+    background: #0000c2;
+    color: white;
+    border-color: white !important;
+    div > span {
+        color: white;
+    }
+}
+.spell-card.alteration > header {
+    background: #00c2c2;
+    color: white;
+    border-color: white !important;
+    div > span {
+        color: white;
+    }
+}
+.spell-card.divination > header {
+    background: #ffd700;
+    color: #333333;
+    border-color: #333333 !important;
+    div > span {
+        color: #333333;
+    }
+}
