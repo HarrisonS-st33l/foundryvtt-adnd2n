@@ -17,4 +17,10 @@ export default class Adnd2nItemSheet extends ItemSheet {
         data.isOwned = this.object.isOwned;
         return data;
     }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        if (!this.options.editable) return;
+    }
 }

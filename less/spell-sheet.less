@@ -8,22 +8,31 @@
             border: solid 1px #7a7971;
             background-color: rgba(0,0,0,0.05);
             font-size: medium;
-            height: 25px;
+            height: fit-content;
             position: relative;
             display: flex;
             align-items: center;
         }
         input {
             height: 25px;
-            border: 1px 0 0 0;
+            border: none;
             outline: 0;
             background-color: transparent;
             flex: 1;
         }
+        textarea {
+            width: 100%;
+            border: none;
+            outline: 0;
+            background-color: transparent;
+            height: inherit;
+            font-family: "Signika", sans-serif;
+            padding: 0; 
+        }
         input[type=checkbox] {
             height: 20px;
+            margin: 2.5px 0 2.5px 0;
             flex: 0.25;
-            margin: 0;
         }
         select {
             height: 25px;
@@ -33,7 +42,7 @@
             flex: 1;
         }
         label {
-            padding: 0 0 0 0;
+            padding: 0 10px 0 0;
             font-size: small;
             float: left;
         }
