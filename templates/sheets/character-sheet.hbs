@@ -126,7 +126,7 @@
                     </tr>
                     {{#each actor.items as |item id|}}
                     {{#ifEquals item.type "weapon"}}
-                    <tr class ="flexrow weapon item" data-item-id="{{item._id}}">
+                    <tr class="flexrow weapon item" data-item-id="{{item._id}}">
                         <td class="weapon-stat weapon-name"><a class="rollable-item">{{item.name}}</a></td>
                         <td class="weapon-stat weapon-toHit">{{concat '+' item.data.toHit}}</td>
                         <td class="weapon-stat weapon-toDam">{{concat '+' item.data.toDam}}</td>
@@ -142,6 +142,22 @@
                             <a class="weapon-control weapon-edit" title="editWeapon" data-type="item"><i class="fas fa-edit"></i></a>
                             <a class="weapon-control weapon-delete" title="deleteWeapon" data-type="item"><i class="fas fa-trash"></i></a>
                         </td>
+                    </tr>
+                    {{/ifEquals}}
+                    {{/each}}
+                </table>
+            </section>
+        </div>
+        <div class="tab spells", data-group="primary", data-tab="spells">
+            <section class="spell-list">
+                <table>
+                    <tr class="flexrow spell-header">
+                        <th class="spell-name">{{localize "adnd2n.spells.spell"}}</th>
+                    </tr>
+                    {{#each actor.items as |item id|}}
+                    {{#ifEquals item.type "spell"}}
+                    <tr class="flexrow spell item" data-item-id="{{item._id}}">
+                        <td class="spell-stat spell-name"><a class="rollable-item">{{item.name}}</a></td>
                     </tr>
                     {{/ifEquals}}
                     {{/each}}

@@ -3,7 +3,7 @@
     "title": "Advanced Dungeons and Dragons 2.n",
     "description": "A System for playing D&D as Neal",
     "author": "mr st33l",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.10",
     "esmodules": [
@@ -25,5 +25,5 @@
     "gridDistance": "5",
     "gridUnits": "ft",
     "primaryTokenAttribute": "health",
-    "initiative": "1d10 + @speed"
+    "initiative": "1d10 + @modifier"
 }

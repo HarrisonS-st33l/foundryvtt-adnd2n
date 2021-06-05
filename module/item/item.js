@@ -19,7 +19,7 @@ export default class Adnd2nItem extends Item {
 
     chatTemplate = {
         "weapon": "systems/adnd2n/templates/chat/weapon-card.hbs",
-        "spell": "systems/adnd2n/templates/partials/spell-card.hbs"
+        "spell": "systems/adnd2n/templates/chat/spell-card.hbs"
     };
 
     async roll() {

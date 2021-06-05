@@ -445,3 +445,6 @@
 .adnd2n.sheet.item form.spell .sheet-content .row8 {
   grid-template-columns: 50% 50%;
 }
+.chat-card > .card-content * {
+  max-width: 272px;
+}

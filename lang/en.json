@@ -120,32 +120,25 @@
             "spells": "Spells"
         },
         "chat": {
+            "options": {
+                "modifier": "Modifier"
+            },
             "attack": {
-                "title": "Attack ({weapon})",
-                "options": {
-                    "modifier": "Modifier"
-                }
+                "title": "Attack ({weapon})"
             },
             "damage": {
                 "title": "Damage ({weapon})",
                 "options": {
-                    "modifier": "Modifier",
                     "crit": "Critical Hit"
                 }
             },
             "abilityCheck": {
-                "title": "{type} Check",
-                "options": {
-                    "modifier": "Modifier"
-                }
+                "title": "{type} Check"
             },
             "derivedAbilityCheck": {
                 "title": "{type} Check",
                 "passed": "Passed!",
-                "failed": "Failed!",
-                "options": {
-                    "modifier": "Modifier"
-                }  
+                "failed": "Failed!"
             },
             "actions": {
                 "roll": "Roll",
@@ -154,16 +147,13 @@
             "savingThrow": {
                 "title": "Saving Throw vs. {type}",
                 "passed": "Passed!",
-                "failed": "Failed!",
-                "options": {
-                    "modifier": "Modifier"
-                }
+                "failed": "Failed!"
             },
             "surpriseRoll": {
-                "title": "Surprise Roll",
-                "options": {
-                    "modifier": "Modifier"
-                }
+                "title": "Surprise Roll"
+            },
+            "initiative": {
+                "title": "Initiative Roll"
             }
         },
         "crits": {
@@ -218,7 +208,11 @@
             "verbal": "Verbal",
             "material": "Material",
             "description": "Description",
-            "consumed": "Consumed"
+            "consumed": "Consumed",
+            "spell": "Spell"
+        },
+        "combat": {
+            "missingInitiative": "{token} has not rolled initiative."
         }
     }
 }

@@ -85,5 +85,7 @@ export default class Adnd2nActor extends Actor {
         value = parseInt(perception.value);
         perception.surpriseAdjust = perceptionTable['surpriseAdjust'][value];
         perception.illusionImmunity = perceptionTable['illusionImmunity'][value];
-        }
+    }
+
+    
 }

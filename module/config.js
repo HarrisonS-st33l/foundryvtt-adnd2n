@@ -34,3 +34,7 @@ adnd2n.spellSchools = {
     alteration: "adnd2n.spells.schools.alteration",
     divination: "adnd2n.spells.schools.divination"
 }
+
+adnd2n.combat = {
+    defaultSpeed: 3
+}
