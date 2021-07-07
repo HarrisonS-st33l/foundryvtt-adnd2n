@@ -39,6 +39,17 @@
             "movementSpeed": "Speed",
             "class": "Class",
             "alignment": "Alignment",
+            "alignments": {
+                "lawfulGood": "Lawful Good",
+                "neutralGood": "Neutral Good",
+                "chaoticGood": "Chaotic Good",
+                "lawfulNeutral": "Lawful Neutral",
+                "neutral": "Neutral",
+                "chaoticNeutral": "Chaotic Neutral",
+                "lawfulEvil": "Lawful Evil",
+                "neutralEvil": "Neutral Evil",
+                "chaoticEvil": "Chaotic Evil"
+            },
             "appearance": {
                 "hair": "Hair",
                 "eyes": "Eyes",
@@ -52,6 +63,31 @@
                 "max": "Max HP",
                 "current": "HP Remaining",
                 "temp": "Temp"
+            },
+            "armorClass": "Armor Class",
+            "monster": {
+                "climateTerrain": "Climate/Terrain",
+                "frequency": "Frequency",
+                "organization": "Organization",
+                "activityCycle": "Activity Cycle",
+                "diet": "Diet",
+                "intelligence": "Intelligence",
+                "treasure": "Treasure",
+                "numberAppearing": "No. Appearing",
+                "movement": "Movement",
+                "hitDice": "Hit Dice",
+                "toHit": "To Hit",
+                "numberAttacks":" No. of Attacks",
+                "damage" : "Damage/Attack",
+                "specialAttacks": "Special Attacks",
+                "specialDefenses": "Special Defenses",
+                "magicResistance": "Magic Resistance",
+                "morale": "Morale",
+                "xp": "XP Value",
+                "appearance": "Appearance",
+                "combat": "Combat",
+                "habitatSociety": "Habitat/Society",
+                "ecology": "Ecology"
             }
         },
         "attributes": {
@@ -117,7 +153,10 @@
             "createWeapon": "Create Weapon",
             "editWeapon": "Edit Weapon",
             "deleteWeapon": "Delete Weapon",
-            "spells": "Spells"
+            "spells": "Spells",
+            "information": "Information",
+            "combat": "Combat",
+            "notes": "Notes"
         },
         "chat": {
             "options": {

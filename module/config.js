@@ -38,3 +38,15 @@ adnd2n.spellSchools = {
 adnd2n.combat = {
     defaultSpeed: 3
 }
+
+adnd2n.alignments = {
+    lawfulGood: "adnd2n.character.alignments.lawfulGood",
+    neutralGood: "adnd2n.character.alignments.neutralGood",
+    chaoticGood: "adnd2n.character.alignments.chaoticGood",
+    lawfulNeutral: "adnd2n.character.alignments.lawfulNeutral",
+    neutral: "adnd2n.character.alignments.neutral",
+    chaoticNeutral: "adnd2n.character.alignments.chaoticNeutral",
+    lawfulEvil: "adnd2n.character.alignments.lawfulEvil",
+    neutralEvil: "adnd2n.character.alignments.neutralEvil",
+    chaoticEvil: "adnd2n.character.alignments.chaoticEvil",
+}

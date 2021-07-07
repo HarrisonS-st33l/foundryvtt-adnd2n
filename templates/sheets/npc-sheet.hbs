@@ -1,0 +1,48 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a data-tab="information">{{localize "adnd2n.sheet.information"}}</a>
+        <a data-tab="combat">{{localize "adnd2n.sheet.combat"}}</a>
+        <a data-tab="notes">{{localize "adnd2n.sheet.notes"}}</a>
+    </nav>
+    <section class="npc sheet-body">
+        <div class="tab information" data-group="primary" data-tab="information">
+            <div class="form-text"><label for="climateTerrain">{{localize "adnd2n.character.monster.climateTerrain"}}:</label><input name="data.climateTerrain" id="climateTerrain" type="text" value="{{data.climateTerrain}}"/></div>
+            <div class="form-text"><label for="frequency">{{localize "adnd2n.character.monster.frequency"}}:</label><input name="data.frequency" id="frequency" type="text" value="{{data.frequency}}"/></div>
+            <div class="form-text"><label for="organisation">{{localize "adnd2n.character.monster.organization"}}:</label><input name="data.organization" id="organization" type="text" value="{{data.organization}}"/></div>
+            <div class="form-text"><label for="activityCycle">{{localize "adnd2n.character.monster.activityCycle"}}:</label><input name="data.activityCycle" id="activityCycle" type="text" value="{{data.activityCycle}}"/></div>
+            <div class="form-text"><label for="diet">{{localize "adnd2n.character.monster.diet"}}:</label><input name="data.diet" id="diet" type="text" value="{{data.diet}}"/></div>
+            <div class="form-text"><label for="intelligence">{{localize "adnd2n.character.monster.intelligence"}}:</label><input name="data.intelligence" id="intelligence" type="text" value="{{data.intelligence}}"/></div>
+            <div class="form-text"><label for="treasure">{{localize "adnd2n.character.monster.treasure"}}:</label><input name="data.treasure" id="treasure" type="text" value="{{data.treasure}}"/></div>
+            <div class="form-text"><label for="alignment">{{localize "adnd2n.character.alignment"}}:</label>
+                <select name="data.alignment">
+                    {{#select data.alignment}}
+                    {{#each config.alignments as |name alignment|}}
+                    <option value="{{alignment}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+        <div class="tab combat" data-group="primary" data-tab="combat">
+            <div class="form-text"><label for="numberAppearing">{{localize "adnd2n.character.monster.numberAppearing"}}:</label><input name="data.numberAppearing" id="numberAppearing" type="text" value="{{data.numberAppearing}}"/></div>
+            <div class="form-text"><label for="armorClass">{{localize "adnd2n.character.armorClass"}}:</label><input name="data.armorClass" id="armorClass" type="text" value="{{data.armorClass}}"/></div>
+            <div class="form-text"><label for="movement">{{localize "adnd2n.character.monster.movement"}}:</label><input name="data.movement" id="movement" type="text" value="{{data.movement}}"/></div>
+            <div class="form-text"><label for="hitDice">{{localize "adnd2n.character.monster.hitDice"}}:</label><input name="data.hitDice" id="hitDice" type="text" value="{{data.hitDice}}"/></div>
+            <div class="form-text"><label for="toHit">{{localize "adnd2n.character.monster.toHit"}}:</label><input name="data.toHit" id="toHit" type="text" value="{{data.toHit}}"/></div>
+            <div class="form-text"><label for="numberAttacks">{{localize "adnd2n.character.monster.numberAttacks"}}:</label><input name="data.numberAttacks" id="numberAttacks" type="text" value="{{data.numberAttacks}}"/></div>
+            <div class="form-text"><label for="damage">{{localize "adnd2n.character.monster.damage"}}:</label><input name="data.damage" id="damage" type="text" value="{{data.damage}}"/></div>
+            <div class="form-text"><label for="specialAttacks">{{localize "adnd2n.character.monster.specialAttacks"}}:</label><input name="data.specialAttacks" id="specialAttacks" type="text" value="{{data.specialAttacks}}"/></div>
+            <div class="form-text"><label for="specialDefenses">{{localize "adnd2n.character.monster.specialDefenses"}}:</label><input name="data.specialDefenses" id="specialDefenses" type="text" value="{{data.specialDefenses}}"/></div>
+            <div class="form-text"><label for="magicResistance">{{localize "adnd2n.character.monster.magicResistance"}}:</label><input name="data.magicResistance" id="magicResistance" type="text" value="{{data.magicResistance}}"/></div>
+            <div class="form-text"><label for="size">{{localize "adnd2n.character.size"}}:</label><input name="data.size" id="size" type="text" value="{{data.size}}"/></div>
+            <div class="form-text"><label for="morale">{{localize "adnd2n.character.monster.morale"}}:</label><input name="data.morale" id="morale" type="text" value="{{data.morale}}"/></div>
+            <div class="form-text"><label for="xp">{{localize "adnd2n.character.monster.xp"}}:</label><input name="data.xp" id="xp" type="text" value="{{data.xp}}"/></div>
+        </div>
+        <div class="tab notes" data-group="primary" data-tab="notes">
+            <div class="form-text">{{editor content=data.appearance target="data.appearance" button=true owner=owner editable=editable}}</div>
+            <div class="form-text"><label for="combat">{{localize "adnd2n.character.monster.combat"}}:</label>{{editor content=data.combat target="data.combat" button=true owner=owner editable=editable}}</div>
+            <div class="form-text"><label for="habitatSociety">{{localize "adnd2n.character.monster.habitatSociety"}}:</label>{{editor content=data.habitatSociety target="data.habitatSociety" button=true owner=owner editable=editable}}</div>
+            <div class="form-text"><label for="ecology">{{localize "adnd2n.character.monster.ecology"}}:</label>{{editor content=data.ecology target="data.ecology" button=true owner=owner editable=editable}}</div>
+        </div>
+    </section>
+</form>

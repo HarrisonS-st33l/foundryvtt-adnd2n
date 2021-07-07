@@ -183,6 +183,19 @@
 .adnd2n.sheet.character .weapons .weapon-list .flexrow .weapon-speed {
   flex: 0.5;
 }
+.adnd2n.sheet.character .npc.sheet-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.adnd2n.sheet.character .npc.sheet-body .editor-content {
+  min-height: 75px;
+}
+.adnd2n.sheet.character .npc.sheet-body .tab.notes label {
+  color: #000080;
+  font-weight: bold;
+  font-size: medium;
+}
 .adnd2n.sheet.item {
   min-width: 521px;
   min-height: 300px;
